@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;700&family=Lexend+Deca:wght@300;400&family=Open+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E9E9E9;
+    font-family: 'Rubik', sans-serif;
+}
+
+main{
+    margin-top: 10%;
+}
+
+.first{
+    text-align: center;
+}
+
+.second{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+h4{
+    font-size: 40px;
+    font-weight: 700;
+    color: #2B3748;
+    line-height: 47px;
+}
+
+p{
+    font-size: 32px;
+    font-weight: 400;
+    color: #AAAFB6;
+}
+
+.second{
+    margin-top: 20px;
+}
+
+input, button{
+    width: 772px;
+    height: 70px;
+    font-size: 32px;
+    border: 1px solid #010F23;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 32px;
+    color: #010F23;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+input{
+    padding-left: 10px;
+    margin-top: 10px;
+    color: #AAAFB6;
+    background-color: #E9E9E9;
+}
+
+button{
+    background-color: #FFCC80;
+}
+
+button:hover{
+    background: #FFCC80;
+    border: 1px solid #2B3748;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
+}
