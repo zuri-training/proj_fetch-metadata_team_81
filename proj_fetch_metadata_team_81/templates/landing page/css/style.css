@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+    /* margin: 0;
+    padding: 0; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 10px;
+    gap: 10px;
+    height: 40px;
+    width: 200px;
+    border: 0px;
+    background: #0066FF;
+    border-radius: 8px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar button {
+    width: 162px;
+    right: 104px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 8px;
+}
+
+.userimg {
+    width: 24px;
+    height: 24px;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: left;
+    background: #E7E9EB;
+}
+
+@media (min-width : 300px) {
+    .j {
+        margin-top: 100px;
+    }
+
+    .piss {
+        margin-bottom: 100px;
+    }
+
+    .userimg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar button {
+        width: 250px;
+        height: 50px;
+        right: 154px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .nav-font {
+        font-size: 35px;
+    }
+
+    .navbar .side {
+        width: 90px;
+        border: 0px;
+    }
+
+    .mynav {
+        padding-right: 0px;
+        padding-left: 40px;
+    }
+
+    .navbar .logo {
+        width: 30%;
+    }
+
+    .simpletext {
+        width: 100%;
+        margin-top: 100px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        font-size: 64px;
+    }
+
+    .sidepad {
+        padding-left: 60px;
+    }
+
+    .ftxt {
+        font-size: 29px;
+        margin-bottom: 50px;
+    }
+
+    .firstbutton {
+        width: 453px;
+        height: 92px;
+        border-radius: 18px;
+        color: white;
+    }
+
+    .firsttext {
+        position: absolute;
+        font-size: 31px;
+    }
+
+    .fireimg {
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .monitor {
+        width: 88%;
+        margin-left: 50px;
+        margin-top: 45px;
+    }
+    .mbtnn {
+        color: white;
+        width: 691px;
+        margin-top: 52px;
+        border-radius: 17px;
+        height: 96px;
+        font-size: 30px;
+    }
+
+    .file {
+        text-align: center;
+        margin-top: 331px;
+        font-weight: 600;
+        font-size: 51px;
+    }
+
+    .some {
+        width: 84.56px;
+        position: absolute;
+        height: 108.88px;
+        bottom: -294px;
+        left: 815px;
+    }
+
+    .filesimg {
+        margin-top: 91px;
+        width: 80%;
+        margin-left: 10px;
+    }
+
+    .whattext {
+        color: #0066FF;
+        margin-top: 220px;
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .filespad {
+        text-align: center;
+    }
+
+    .h {
+        font-weight: 600;
+        font-size: 56px;
+        margin-bottom: 120px;
+    }
+
+    .swirlpng {
+        position: absolute;
+        left: 496px;
+        bottom: -938px;
+        width: 107px;
+        height: 95px;
+    }
+
+    .pad {
+        padding: 50px;
+    }
+
+    .learn {
+        position: relative;
+        left: 85px;
+        font-size: 40px;
+        top: -142px;
+        color: #0066FF;
+    }
+
+    .filespa {
+        text-align: center;
+        margin-top: 180px;
+    }
+
+    .swirlr {
+        position: relative;
+        width: 333px;
+        left: 587px;
+        top: -241px;
+    }
+
+    .spad {
+        padding-top: 30px;
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    .view {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hfont {
+        font-size: 65px;
+    }
+
+    .arrow {
+        position: relative;
+        width: 36%;
+        height: 17%;
+        left: 159px;
+        bottom: 434px;
+    }
+
+    .sbut {
+        padding: 30px;
+        margin-left: 65px;
+    }
+
+    .z {
+        font-size: 59px;
+    }
+
+    .textbutton {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        color: white;
+        font-size: 22px;
+        line-height: 24px;
+        width: 134px;
+        margin-right: 6px;
+    }
+
+    footer {
+        background-color: #0044AA;
+        color: white;
+        padding: 100px 0 20px;
+        position: relative;
+        z-index: -1;
+        width: 105%;
+    }
+
+    .container {
+        width: 100%;
+        margin-right: 178px;
+    }
+
+    footer ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+        footer ul li {
+            margin-bottom: 20px;
+        }
+
+    .flexdirection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        right: -52px;
+        flex-direction: column;
+    }
+
+    button {
+        color: white;
+        width: 100%;
+    }
+
+    .flex3 {
+        display: flex;
+        font-size: 35px;
+        font-weight: 200;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .br {
+        width: 30px;
+    }
+
+    .flogo {
+        width: 247px;
+        margin: auto;
+    }
+
+    .pfooter {
+        margin-right: 73px;
+    }
+
+    .simple {
+        margin-left: 72px;
+        height: 68px;
+    }
+
+    .services {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    .line {
+        height: 5px;
+        width: 90%;
+        margin-left: 54px;
+        margin-top: 98px;
+    }
+
+    .contact {
+        margin-right: 438px;
+        margin-top: 60px;
+    }
+    .min {
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .ic{
+        width:44px;
+    }
+    .btnn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .mymy {
+        margin-right: 77px;
+    }
+
+    .psimple {
+        width: 100%;
+        font-size: 27px;
+        margin-left: 32px;
+        font-weight: 100;
+        line-height: 36px;
+    }
+
+    .list {
+        font-weight: 600;
+        font-size: 30px;
+    }
+    .tim {
+        margin-left: 48px;
+        font-size: 22px;
+        font-weight: 100;
+    }
+    .types {
+        background-color: #e7e9eb;
+        height: 115px;
+        width: 106%;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+    .miac {
+        width: 60px;
+        float: right;
+        position: relative;
+        bottom: 55px;
+    }
+
+    .mia {
+        width: 100%;
+    }
+
+    .dami {
+        font-size: 30px;
+        margin-left: 15px;
+        font-weight: 600;
+    }
+    .inter {
+        text-align: center;
+        font-size: 67px;
+        font-weight: 600;
+    }
+    .long {
+        margin-top: 150px;
+        background-image: url(long.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 5510px;
+        background-position-x: center;
+        background-size: 805px;
+    }
+    .ex {
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 119px;
+    }
+    .dum {
+        width: 541px;
+        height: 60px;
+        margin: auto;
+        font-size: 21px;
+        margin-top: 50px;
+        border-radius: 13px;
+    }
+
+}
+
+@media (min-width : 1000px) {
+    .ex {
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .inter {
+        text-align: center;
+        font-size: 41px;
+        font-weight: 600;
+    }
+    .navbar .logo {
+        width: 215px;
+    }
+    .long {
+        margin-top: 150px;
+        background-image: url(bglong.png);
+        width: 100%;
+        background-repeat: no-repeat;
+        height: 702px;
+        background-position-x: center;
+        background-size: 1264px;
+    }
+
+    .mynav {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .textbutton {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        width: 153px;
+        margin-right: 9px;
+        margin-top: 4px;
+    }
+
+    .simpletext {
+        width: 610px;
+        margin-top: 100px;
+        margin-bottom: 0;
+        font-weight: 700;
+        font-size: 43px;
+    }
+
+    .align {
+        width: 561px;
+    }
+
+    .firstbutton {
+        width: 237px;
+        height: 50px;
+        color: white;
+    }
+
+
+
+    .fireimg {
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .monitor {
+        width: 90%;
+        margin-left: 53px;
+    }
+
+    .sidepad {
+        padding-left: 83px;
+    }
+
+    .nav-font {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .file {
+        font-size: 35px;
+        margin-top: 170px;
+    }
+
+    .some {
+        width: 76.56px;
+        height: 99.88px;
+        bottom: -153px;
+        left: 774px;
+    }
+
+    .filesimg {
+        margin-top: 51px;
+        width: 67%;
+    }
+
+
+
+    .whattext {
+        color: #0066FF;
+        margin-top: 120px;
+        font-size: 20px;
+    }
+
+    .filespad {
+        text-align: center;
+    }
+
+    .h {
+        font-weight: 600;
+        font-size: 38px;
+    }
+
+    .swirlpng {
+        position: absolute;
+        left: 576px;
+        bottom: -585px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .pad {
+        padding: 50px;
+    }
+
+    .learn {
+        position: relative;
+        left: 30px;
+        top: -38px;
+        font-size: 16px;
+        color: #0066FF;
+    }
+
+    .filespa {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .swirlr {
+        position: relative;
+        width: 200px;
+        left: 786px;
+        top: -193px;
+    }
+
+    .spad {
+        padding-top: 30px;
+        padding-right: 18%;
+        padding-left: 18%;
+    }
+
+    .tpad {
+        padding-top: 50px;
+    }
+    .firsttext {
+        position: absolute;
+        font-size: 20px;
+    }
+    .view {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .hfont {
+        font-size: 30px;
+    }
+
+    .arrow {
+        width: 80%;
+        margin-bottom: 120px;
+    }
+
+    .sbut {
+        padding: 30px;
+        margin-left: 95px;
+    }
+
+    .ftxt {
+        font-size: 18px;
+    }
+
+    footer {
+        background-color: #0044AA;
+        color: white;
+        padding: 50px 0 20px;
+        height: 680px;
+        position: relative;
+        z-index: -1;
+    }
+
+    .container {
+        width: 100%;
+        margin-right: 100px;
+    }
+    .types {
+        background-color: #e7e9eb;
+        height: 80px;
+        border-radius: 6px;
+        width:100%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    .miac {
+        width: 36px;
+        float: right;
+        position: relative;
+        bottom: 38px
+    }
+    .mia {
+        width: 100%;
+    }
+    .dami {
+        font-size: 30px;
+        margin-left: 15px;
+        font-weight: 600;
+    }
+
+    footer ul {
+        padding: 0;
+        list-style-type: none;
+    }
+
+        footer ul li {
+            margin-bottom: 20px;
+        }
+
+    .flexdirection {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    button {
+        color: white;
+        width: 100%;
+    }
+
+    .flex3 {
+        justify-content: center;
+        margin-bottom: -70px;
+        font-size: 16px;
+    }
+
+    .br {
+        width: 30px;
+    }
+
+    .flogo {
+        width: 165px;
+        margin-left: 65px;
+    }
+
+    .pfooter {
+        margin-bottom: 92px;
+        margin-right: 0;
+    }
+
+    .contact {
+        margin-right: 108px;
+        margin-top: 0;
+    }
+
+    .psimple {
+        text-align: left;
+    }
+
+    .simple {
+        margin-left: 0;
+        height: 68px;
+    }
+
+    .services {
+        display: flex;
+        width: 34%;
+        margin-top: 0;
+    }
+
+    .list {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .userimg {
+        width: 24px;
+        height: 24px;
+    }
+    .min {
+        font-size: 16px;
+        font-weight: 100;
+    }
+    .if {
+        width: 100%;
+    }
+    .ic {
+        width: 24px;
+    }
+    .navbar button {
+        width: 221px;
+        height: 50px;
+        right: 154px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 8px;
+    }
+    .tim {
+        margin-left: 21px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    .mbtnn {
+        color: white;
+        width: 301px;
+        margin-top: 27px;
+        border-radius: 10px;
+        height: 66px;
+        font-size: 21px;
+    }
+    .psimple {
+        width: 100%;
+        font-size: 20px;
+        margin-left: 0;
+        font-weight: 100;
+        line-height: 36px;
+    }
+}
