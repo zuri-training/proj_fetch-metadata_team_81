@@ -162,7 +162,7 @@ button:hover {
 
 .check {
   display: flex;
-  justify-content: flex-slart;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 20px;
 }
@@ -196,7 +196,7 @@ button:hover {
 
 @media screen and (max-width: 1120px) {
   body {
-    overflow: visible;
+    overflow: scroll;
   }
   
   .signUp {
