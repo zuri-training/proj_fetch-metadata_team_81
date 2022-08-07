@@ -10,19 +10,19 @@ from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm, Pas
 class PwdResetConfirmForm(SetPasswordForm):
     new_password1 = forms.CharField(
         label='New password', widget=forms.PasswordInput(
-           # attrs={'class': 'form-control mb-3', 'placeholder': 'New Password', 'id': 'form-newpass'}))
+            attrs={'class': 'input_field', 'placeholder': 'New Password', 'id': 'form-newpass'}))
     new_password2 = forms.CharField(
         label='Repeat password', widget=forms.PasswordInput(
-           # attrs={'class': 'form-control mb-3', 'placeholder': 'New Password', 'id': 'form-new-pass2'}))
+            attrs={'class': 'form-control mb-3', 'placeholder': 'New Password', 'id': 'form-new-pass2'}))
 
 
 class UserLoginForm(AuthenticationForm):
 
-    username = forms.CharField(widget=forms.TextInput(
-        #attrs={'class': 'form-control mb-3', 'placeholder': 'Username', 'id': 'login-username'}))
+    email = forms.EmailField(max_length=254, widget=forms.TextInput(
+        attrs={'class': 'input_field', 'id': 'email', 'type':'email'})
+        )
     password = forms.CharField(widget=forms.PasswordInput(
-       # attrs={'class': 'form-control','placeholder': 'Password','id': 'login-pwd',
-        }
+        attrs={'class': 'input_field','id': 'password',  'type':'password'}
     ))
 
 

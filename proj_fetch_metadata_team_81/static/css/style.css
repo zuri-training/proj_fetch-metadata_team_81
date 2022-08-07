@@ -64,7 +64,7 @@ select {
     background: #E7E9EB;
 }
 
-@media (min-width : 300px) {
+@media screen and (min-width : 300px) {
     .j {
         margin-top: 100px;
     }
@@ -219,12 +219,13 @@ select {
     .filespa {
         text-align: center;
         margin-top: 180px;
+        margin-right: 333px;
     }
 
     .swirlr {
         position: relative;
         width: 333px;
-        left: 587px;
+        left: 431px;
         top: -241px;
     }
 
@@ -440,21 +441,24 @@ select {
 
 }
 
-@media (min-width : 1000px) {
+@media screen and (min-width : 1000px) {
     .ex {
         font-size: 26px;
         font-weight: 500;
         text-align: center;
         margin-top: 20px;
     }
+
     .inter {
         text-align: center;
         font-size: 41px;
         font-weight: 600;
     }
+
     .navbar .logo {
         width: 215px;
     }
+
     .long {
         margin-top: 150px;
         background-image: url(bglong.png);
@@ -497,6 +501,7 @@ select {
     .firstbutton {
         width: 237px;
         height: 50px;
+        border-radius: 7px;
         color: white;
     }
 
@@ -580,12 +585,13 @@ select {
     .filespa {
         text-align: center;
         margin-top: 100px;
+        margin-right: 200px;
     }
 
     .swirlr {
         position: relative;
         width: 200px;
-        left: 786px;
+        left: 686px;
         top: -193px;
     }
 
@@ -598,10 +604,12 @@ select {
     .tpad {
         padding-top: 50px;
     }
+
     .firsttext {
         position: absolute;
         font-size: 20px;
     }
+
     .view {
         padding-left: 60px;
         padding-right: 60px;
@@ -638,23 +646,27 @@ select {
         width: 100%;
         margin-right: 100px;
     }
+
     .types {
         background-color: #e7e9eb;
         height: 80px;
         border-radius: 6px;
-        width:100%;
+        width: 100%;
         margin-bottom: 20px;
         padding: 15px;
     }
+
     .miac {
         width: 36px;
         float: right;
         position: relative;
         bottom: 38px
     }
+
     .mia {
         width: 100%;
     }
+
     .dami {
         font-size: 30px;
         margin-left: 15px;
@@ -729,20 +741,25 @@ select {
         font-weight: 600;
         font-size: 18px;
     }
+
     .userimg {
         width: 24px;
         height: 24px;
     }
+
     .min {
         font-size: 16px;
         font-weight: 100;
     }
+
     .if {
         width: 100%;
     }
+
     .ic {
         width: 24px;
     }
+
     .navbar button {
         width: 221px;
         height: 50px;
@@ -754,11 +771,13 @@ select {
         padding: 10px;
         gap: 8px;
     }
+
     .tim {
         margin-left: 21px;
         font-size: 18px;
         font-weight: 100;
     }
+
     .mbtnn {
         color: white;
         width: 301px;
@@ -767,6 +786,7 @@ select {
         height: 66px;
         font-size: 21px;
     }
+
     .psimple {
         width: 100%;
         font-size: 20px;

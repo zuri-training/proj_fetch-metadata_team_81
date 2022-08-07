@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>landing page</title>
     <link rel="shortcut icon" href="asset/favicon-32x32 (3).png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+
 
     <!--these are from bootstrap to create the mobile drop down-->
 
@@ -25,28 +28,28 @@
     <header>
         <nav style="color: white;" class="mynav navbar navbar-expand-lg navbar-light  relative-top">
             <div class="container-fluid">
-                <img class="logo" src="css/Logo.png" alt="image">
+                <img class="logo" src="{% static 'css/logo.png' %}" alt="image">
                 <button class="side navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class=" nav-font navbar-nav me-auto ms-auto mb-2 mb-lg-0">
                         <li class="nav-item ms-4">
-                            <a class="nav-link active" aria-current="page" href="gasnear.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="">Home</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link active" aria-current="page" href="About.html">Features</a>
+                            <a class="nav-link active" aria-current="page" href="">Features</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link active" aria-current="page" href="Service.html">About us</a>
+                            <a class="nav-link active" aria-current="page" href="">About us</a>
                         </li>
                         <li class="nav-item ms-4">
-                            <a class="nav-link active" aria-current="page" href="Service.html">Support</a>
+                            <a class="nav-link active" aria-current="page" href="">Support</a>
                         </li>
                     </ul>
-                    <button>
-                        <div><img class="userimg" src="user.png" alt="png"></div>
-                        <div><p class="textbutton">Get started</p></div>
+                    <button >
+                        <div><img class="userimg" src="{% static 'user.png' %}" alt="png"></div>
+                        <div><a href="{% url "login" %}"><p class="textbutton">Log in</p></a></div>
                     </button>
 
                 </div>
@@ -63,127 +66,131 @@
                 MetaDrix is a metadata system that collects, analyses your file, converts it to different file formats at your comfort while keeping your file secured.
             </p><br>
             <div style="display: flex; gap: 1em; " class="fire">
-                <button class="firstbutton" type="submit"><span class="firsttext">Get started</span></button>
-                <img class="fireimg" src="./fxemoji_fire.png" alt="png"> <small class="ftxt" style="margin-top:15px;margin-left:6px;">Now it's free</small>
+                <a href="{% url "login" %}">
+                    <button class="firstbutton" type="submit">
+                        <span class="firsttext">Get started</span>
+                    </button>
+                </a>
+                <img class="fireimg" src="{% static 'fxemoji_fire.png' %}" alt="png"> <small class="ftxt" style="margin-top:15px;margin-left:6px;">Now it's free</small>
             </div>
 
         </div>
         <div class="col-lg-6">
-            <img class="monitor" src="./monitor img.png" alt="jpegs">
+            <img class="monitor" src="{% static 'monitor img.png' %}" alt="jpegs">
         </div>
 
     </div>
     <div style="text-align:center;">
         <h2 class="file">Some supported file format</h2>
-        <img class="some" src="./5.png" alt="png">
+        <img class="some" src="{% static '5.png' %}" alt="png">
     </div>
     <div class="filespad">
-        <img class="filesimg" src="files.png" alt="files image" />
+        <img class="filesimg" src="{% static 'files.png' %}" alt="files image" />
     </div>
     <div class="filespad">
         <p class="whattext">WHAT WE DO</p>
     </div>
     <div>
         <h2 class="filespad h">Know and do more<br /> with your files</h2>
-        <img class="swirlpng" src="swirl.png" alt="Swirl png" />
+        <img class="swirlpng" src="{% static 'swirl.png' %}" alt="Swirl png" />
     </div>
     <div class="row pad">
         <div class="col-lg-4">
-            <img src="analyse.png" alt="Alternate Text" />
+            <img src="{% static 'analyse.png' %}" alt="Alternate Text" />
             <div class="">
-                <p class="learn">Learn more</p>
+                <a href="{% url "login" %}"><p class="learn">Learn more</p></a>
             </div>
         </div>
         <div class="col-lg-4">
-            <img src="convert.png" alt="Alternate Text" />
+            <img src="{% static 'convert.png' %}" alt="Alternate Text" />
             <div class="">
-                <p class="learn">Learn more</p>
+                <a href="{% url "login" %}"><p class="learn">Learn more</p></a>
             </div>
         </div>
         <div class="col-lg-4">
-            <img src="download.png" alt="Alternate Text" />
+            <img src="{% static 'download.png' %}" alt="Alternate Text" />
             <div class="">
-                <p class="learn">Learn more</p>
+                <a href="{% url "login" %}"><p class="learn">Learn more</p></a>
             </div>
         </div>
     </div>
     <h2 class="filespa h">Why use </h2>
-    <img class="swirlr" src="css/Logo.png" alt="Alternate Text" />
+    <img class="swirlr" src="{% static 'css/Logo.png' %}" alt="Alternate Text" />
     <div style="padding-top: 0;" class="row pad">
         <div class="col-lg-4 piss">
-            <img src="privacy.png" alt="Alternate Text" />
+            <img src="{% static 'privacy.png' %}" alt="Alternate Text" />
 
         </div>
         <div class="col-lg-4 piss">
-            <img src="secure.png" alt="Alternate Text" />
+            <img src="{% static 'secure.png' %}" alt="Alternate Text" />
 
         </div>
         <div class="col-lg-4 piss">
-            <img src="reliable.png" alt="Alternate Text" />
+            <img src="{% static 'reliable.png' %}" alt="Alternate Text" />
 
         </div>
     </div>
     <div class="row spad">
         <div class="col-lg-6 piss">
-            <img src="generous.png" alt="Alternate Text" />
+            <img src="{% static 'generous.png' %}" alt="Alternate Text" />
 
         </div>
         <div class="col-lg-6 piss">
-            <img src="powerful.png" alt="Alternate Text" />
+            <img src="{% static 'powerful.png' %}" alt="Alternate Text" />
 
         </div>
 
     </div>
-        <div class="inter">
-            Interact with some of the<br /> <span style="
+    <div class="inter">
+        Interact with some of the<br /> <span style="
     color: #0066FF;
 ">features</span> we offer
-        </div>
-        <div class="long"></div>
-        <div class="ex">
-            Explore Extract, Copy, Convert, Download and Share features<br />
-            with a
-            <span style="
+    </div>
+    <div class="long"></div>
+    <div class="ex">
+        Explore Extract, Copy, Convert, Download and Share features<br />
+        with a
+        <span style="
     color: #0066FF;">free account.</span>
-        </div>
-    <Button class="dum">create a free account</Button>
+    </div>
+    <a  href="{% url "login" %}"><Button class="dum">create a free account</Button></a>
     <h2 class="filespa h z">Frequently Asked Questions (FAQ)</h2>
     <div class="form pad">
         <div class="types">
             <div class="dami">How do I read Metadata?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
         <div class="types">
             <div class="dami">Are my files secured?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
         <div class="types">
             <div class="dami">What file format can I upload?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
 
         <div class="types">
             <div class="dami">What is a Metadata?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
         <div class="types">
             <div class="dami">Hidden data in document?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
         <div class="types">
             <div class="dami">Does it support all pictures and videos file format?</div>
             <div class="miac">
-                <img class="mia" src="arrow-down.png" alt="Alternate Text" />
+                <img class="mia" src="{% static 'arrow-down.png' %}" alt="Alternate Text" />
             </div>
         </div>
 
@@ -191,7 +198,7 @@
     <footer>
         <div class="container">
             <div class="flogo">
-                <img src="css/Logo.png" alt="image">
+                <img src="{% static 'css/Logo.png' %}" alt="image">
             </div><br>
             <div class="flexdirection">
                 <div class="pfooter">
@@ -202,7 +209,7 @@
                     </div>
 
                     <div class="btnn">
-                        <button class="mbtnn" type="submit">Get started</button>
+                        <a  href="{% url "login" %}"><button class="mbtnn" type="submit">Get started</button></a>
                     </div>
                 </div>
 
@@ -236,23 +243,23 @@
                         <br>
                         <li>
                             <div style="display: flex; gap: 1em">
-                                <div class="ic"><img class="if" src="./vuesax/linear/vuesax/linear/sms.png" alt="png"></div>
+                                <div class="ic"><img class="if" src="{% static './vuesax/linear/vuesax/linear/sms.png' %}" alt="png"></div>
                                 <span class="tim">info@metaDrix.com</span>
                             </div>
                         </li>
                         <br />
                         <li>
                             <div style="display: flex; gap: 1em">
-                                <div class="ic"><img class="if" src="./vuesax/linear/vuesax/linear/call-calling.png" alt="png"></div>
+                                <div class="ic"><img class="if" src="{% static './vuesax/linear/vuesax/linear/call-calling.png' %}" alt="png"></div>
                                 <span class="tim"> 01-0213321212</span>
                             </div>
                         </li>
                         <br />
                         <li>
                             <div style="display: flex; gap: 1em;">
-                                <img class="ic" src=" ./uit_facebook-f.png" alt="png">
-                                <img class="ic" style="margin-right: 50px;margin-left: 50px;" src="./vuesax/linear/vuesax/linear/instagram.png" alt="png">
-                                <img class="ic" src="./Vector.png" alt="png">
+                                <img class="ic" src="{% static './uit_facebook-f.png' %} " alt="png">
+                                <img class="ic" style="margin-right: 50px;margin-left: 50px;" src="{% static 'vuesax/linear/vuesax/linear/instagram.png' %}" alt="png">
+                                <img class="ic" src="{% static './Vector.png' %}" alt="png">
                             </div>
                         </li>
                     </ul>
@@ -264,7 +271,7 @@
         <div class="flex3" style="display: flex;">
             <div>
                 <p>
-                    &copy; 2022 Megadrix.com
+                    &copy; 2022 Metadrix.com
                 </p>
             </div>
             <div class="br"></div>

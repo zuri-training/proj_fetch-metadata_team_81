@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Metadrix Sign-in Page</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="image">
+            <img src="{% static './img/sign-in_page_img.png' %}">
+        </section>
+        <section class="signIn">
+            <img src="{% static './img/Logo.png' %}">
+
+            <h3>Sign in to MetaDrix </h3>
+            <form class="sign-in" action="{% url 'login' %}"  method="post">
+                {% csrf_token %}
+                <label for="#" id="email">Email address</label>
+                {{ form.email}}
+                <label for="#" class="pass">Password</label>
+                {{ form.password}}
+                <button type="submit" value="Metadrix Sign-in Page">Sign in</button>
+            </form>
+
+            <p id="forgot_password"><a href="">Forgot password?</a></p>
+            <span>
+                <strong>Don’t have an account?</strong>
+                <p id="sign-up_link"><a href="">Sign up</a></p>
+            </span>
+        </secction>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/153cb40420.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
