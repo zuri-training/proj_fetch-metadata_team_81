@@ -2,6 +2,7 @@ body{
  margin: auto;
  margin-left: 15vw;
  margin-top: 2vh;
+ font-family: Arial, Helvetica, sans-serif;
 }
 .logout-header{
 color: #010F23;
@@ -37,23 +38,34 @@ font-size: 3.3vw;
  margin-left: 4.4vw;
 }
 @media only screen and (max-width: 768px){
+ body{
+  margin-left: 7vw;
+  margin-right: 7vw;
+ }
 .logout-header{
  position: relative;
-
+ top: 20rem;
+ font-size: 7vw;
 }
-.open-mail h1{
- font-size: 7.5vw;
- color: #2B3748;
+.logout-img{
+ position: relative;
+ object-fit: contain;
+ bottom: 15vh;
 }
-.open-mail h3 {
- font-weight: lighter;
- font-size: 3.8vw;
+.btn-container{
+ display: flex;
 }
-.open-mail p{
- font-size: 3.8vw;
- color:#808791;
+.logout-container{
+ display: flex;
+ flex-direction: column;
 }
-.email-icon{
- width: 18vw;
+.logout-btn{
+ position: relative;
+ bottom: -50vh;
+ width: 48vw;
+ font-size: 4.3vw;
+}
+.go-back-home-btn{
+ margin-left: 5vw;
 }
 }
