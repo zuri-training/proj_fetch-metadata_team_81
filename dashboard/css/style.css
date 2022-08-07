@@ -1,0 +1,199 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Rubik';
+    /* overflow-x: hidden; */
+    /* margin: 0;
+    padding: 0; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    padding: 30px;
+    border-right: #bfb9b9 1px solid;
+}
+.scrollbar {
+    margin-left: auto;
+}
+.logo {
+    width: 100%;
+}
+.logocont {
+    width: 200px;
+}
+.m {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.mm {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.ic {
+    width: 100%;
+}
+.icon {
+    width: 24px;
+}
+.load {
+    padding: 20px;
+    height: 21%;
+}
+.loadd {
+    padding: 20px;
+    height: 14%;
+}
+.loaddd {
+    padding: 20px;
+    height: 6%;
+}
+.not {
+    position: relative;
+    left: 40px;
+    bottom: 24px;
+    white-space: nowrap;
+}
+.line {
+    height: 1px;
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 75px;
+}
+.linee {
+    height: 1px;
+    width: 90%;
+    margin-left: 15px;
+}
+.t {
+    margin-top: 60px;
+}
+.name {
+    font-size: 39px;
+    font-weight: 600;
+}
+.emoji {
+    width: 100%;
+}
+.emojil {
+    width: 41px;
+    position: relative;
+    left: 195px;
+    bottom: 47px;
+}
+.mim {
+    width: 336px;
+}
+.mi{
+    width:100%;
+}
+.arrow {
+    width: 81px;
+    position: relative;
+    left: 413px;
+    bottom: 200px;
+}
+.detail {
+    position: relative;
+    width: 419px;
+    padding: 148px;
+    height: 373px;
+    left: 564px;
+    background-color: aliceblue;
+    text-align: center;
+    bottom: 418px;
+    border: 2px #d2cece solid;
+}
+.metadata{
+
+}
+input[type="file"]{
+    display:none;
+}
+.push {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #0066FF;
+    width: 81px;
+    color: white;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 7px;
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    bottom: 119px;
+    left: 125px;
+}
+.search {
+    position: relative;
+    bottom: 362px;
+    left: 597px;
+    background-color: #F3F8FF;
+    border: 0px;
+    border-radius: 3px;
+    width: 341px;
+    height: 34px;
+}
+.recent {
+    font-size: 35px;
+    font-weight: 600;
+    position: relative;
+    bottom: 289px;
+}
+.filespace {
+    background-color: #F3F8FF;
+    width: 90%;
+    position: relative;
+    height: 80vh;
+    font-size: 23px;
+    padding: 40px;
+    font-weight: 200;
+    bottom: 237px;
+    text-align: center;
+}
+.help {
+    font-size: 48px;
+    font-weight: 600;
+}
+.freq {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.types {
+    background-color: #e7e9eb;
+    height: 80px;
+    border-radius: 6px;
+    width: 85%;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.miac {
+    width: 36px;
+    float: right;
+    position: relative;
+    bottom: 38px
+}
+
+.mia {
+    width: 100%;
+}
+
+.dami {
+    font-size: 30px;
+    margin-left: 15px;
+    font-weight: 600;
+}
