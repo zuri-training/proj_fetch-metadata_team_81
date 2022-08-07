@@ -65,7 +65,8 @@ class RegistrationForm(forms.ModelForm):
         label='Enter Username', min_length=4, max_length=50, help_text='Required')
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={
         'required': 'Sorry, you will need an email'})
-    password = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password = forms.CharField(
+        label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(
         label='Repeat password', widget=forms.PasswordInput)
 
@@ -100,13 +101,13 @@ class RegistrationForm(forms.ModelForm):
         self.fields['last_name'].widget.attrs.update(
             {'class': 'input_field', 'id': 'user','type':'text'})
         self.fields['username'].widget.attrs.update(
-            {'class': 'form-control mb-3', 'placeholder': 'Username'})
+            {'class': 'input_field', 'id': 'user','type':'text'})
         self.fields['email'].widget.attrs.update(
-            {'class': 'form-control mb-3', 'placeholder': 'E-mail', 'name': 'email', 'id': 'id_email'})
+            {'class': 'input_field', 'id': 'email','type':'email'})
         self.fields['password'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'Password'})
+             {'class': 'input_field', 'id': 'password','type':'password'})
         self.fields['password2'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'Repeat Password'})
+            {'class': 'input_field', 'id': 'password','type':'password'})
 
 
 class UserEditForm(forms.ModelForm):

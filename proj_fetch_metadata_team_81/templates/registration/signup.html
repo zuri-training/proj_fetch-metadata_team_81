@@ -18,7 +18,7 @@
             <img src="{% static './img/Logo.png' %}" class="logo">
 
             <h3 id="header">Sign up to create an account</h3>
-            <form class="sign-up" action="{% url 'login' %}" method="post">
+            <form class="sign-up" action="." method="post">
 
                 {% csrf_token %}
                 {% if form.errors %}
@@ -35,12 +35,14 @@
                 {{ form.first_name }}
                 <label for="#" class="pass">Last Name</label>
                 {{ form.last_name }}<br>
+                <label for="#" class="pass">Username</label>
+                {{ form.username }}<br>
                 <label for="#" id="email">Email address</label>
-                <input type="email" class="input_field" id="email"><br>
+                {{ form.email }}<br>
                 <label for="#" id="password">Create Password</label>
-                <input type="password" class="input_field" id="password"><br>
+                {{ form.password }}<br>
                 <label for="#" id="password">Confirm Password</label>
-                <input type="password" class="input_field" id="password"><br>
+                {{ form.password2 }}<br>
                 <p class="check">
                     <div class="check">
                         <input type="checkbox" id="checkbox">
@@ -50,11 +52,11 @@
                         </p>
                     </div>
 
-                    <button><a href="#">Submit</a></button>
+                    <button type="submit">Submit</button>
             </form>
             <span class="Have-an_account">
                 <span> Already have an account?</span>
-                <p id="sign-up_link"><a href="#">Sign in</a></p>
+                <p id="sign-up_link"><a href="{% url 'login' %}">Sign in</a></p>
             </span>
         </section>
 

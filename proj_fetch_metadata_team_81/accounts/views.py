@@ -36,7 +36,7 @@ def accounts_register(request):
             user.save()
             current_site = get_current_site(request)
             subject = 'Activate your Account'
-            message = render_to_string('registration/account_activation_email.html', {
+            message = render_to_string('registration/open_mail.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
@@ -47,3 +47,18 @@ def accounts_register(request):
     else:
         registerForm = RegistrationForm()
     return render(request, 'registration/signup.html', {'form': registerForm})
+
+
+def activate(request, uidb64, token):
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+        login(request, user)
+        return redirect('login')
+    else:
+        return render(request, 'registration/account_activation_invalid.html')
