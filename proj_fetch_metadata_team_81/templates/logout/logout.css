@@ -1,0 +1,59 @@
+body{
+ margin: auto;
+ margin-left: 15vw;
+ margin-top: 2vh;
+}
+.logout-header{
+color: #010F23;
+font-size: 3.3vw;
+}
+.h1{
+ color:#0066FF;
+ 
+}
+.logout-container{
+ display: flex;
+}
+.login-btn{
+ border: none;
+ background-color:#0066FF;
+ color:#FAFAFA;
+}
+.go-back-home-btn{
+ border: solid 2px #0066FF ;
+ color: #0066FF;
+ background-color:#FAFAFA;
+ margin-left: 1vw;
+}
+.logout-btn{
+ height: 5.5vh;
+ width: 11vw;
+ font-size: 1vw;
+ font-weight: bold;
+ border-radius: 4px;
+ margin-top: 4vh;
+}
+.logout-img{
+ margin-left: 4.4vw;
+}
+@media only screen and (max-width: 768px){
+.logout-header{
+ position: relative;
+
+}
+.open-mail h1{
+ font-size: 7.5vw;
+ color: #2B3748;
+}
+.open-mail h3 {
+ font-weight: lighter;
+ font-size: 3.8vw;
+}
+.open-mail p{
+ font-size: 3.8vw;
+ color:#808791;
+}
+.email-icon{
+ width: 18vw;
+}
+}
