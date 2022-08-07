@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. Welcome to Metadrix")
+    return render(request, 'index.html')
