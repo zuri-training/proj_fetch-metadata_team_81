@@ -18,8 +18,8 @@ class PwdResetConfirmForm(SetPasswordForm):
 
 class UserLoginForm(AuthenticationForm):
 
-    email = forms.EmailField(max_length=254, widget=forms.TextInput(
-        attrs={'class': 'input_field', 'id': 'email', 'type':'email'})
+    username = forms.CharField(widget=forms.TextInput(
+        attrs={'class': 'input_field', 'id': 'email', 'type':'text'})
         )
     password = forms.CharField(widget=forms.PasswordInput(
         attrs={'class': 'input_field','id': 'password',  'type':'password'}
@@ -55,6 +55,12 @@ class PwdResetForm(PasswordResetForm):
 
 class RegistrationForm(forms.ModelForm):
 
+    first_name = forms.CharField(
+        label='Firstname', min_length=4, max_length=50, help_text='Required')
+
+    last_name = forms.CharField(
+        label='Lastname', min_length=4, max_length=50, help_text='Required')
+
     username = forms.CharField(
         label='Enter Username', min_length=4, max_length=50, help_text='Required')
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={
@@ -89,6 +95,10 @@ class RegistrationForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.fields['first_name'].widget.attrs.update(
+            {'class': 'input_field', 'id': 'user','type':'text'})
+        self.fields['last_name'].widget.attrs.update(
+            {'class': 'input_field', 'id': 'user','type':'text'})
         self.fields['username'].widget.attrs.update(
             {'class': 'form-control mb-3', 'placeholder': 'Username'})
         self.fields['email'].widget.attrs.update(
