@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>Register</title>
+</head>
+
+<body style="overflow-y:scroll;">
+    <div class="background_style"></div>
+    <main class="container">
+
+        <section class="signUp">
+            <img src="{% static './img/Logo.png' %}" class="logo">
+
+            <h3 id="header">Sign up to create an account</h3>
+            <form class="sign-up" action="{% url 'login' %}" method="post">
+
+                {% csrf_token %}
+                {% if form.errors %}
+                <p>Please correct the following errors:</p>
+                {% for field in form %}
+                {% if field.errors %}
+                <div class="alert alert-primary" role="alert">
+                    {{ field.label }}: {{ field.errors|striptags }}
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+                <label for="#" id="text">First Name</label>
+                {{ form.first_name }}
+                <label for="#" class="pass">Last Name</label>
+                {{ form.last_name }}<br>
+                <label for="#" id="email">Email address</label>
+                <input type="email" class="input_field" id="email"><br>
+                <label for="#" id="password">Create Password</label>
+                <input type="password" class="input_field" id="password"><br>
+                <label for="#" id="password">Confirm Password</label>
+                <input type="password" class="input_field" id="password"><br>
+                <p class="check">
+                    <div class="check">
+                        <input type="checkbox" id="checkbox">
+                        <p class="footer">
+                            By creating an account you agree to the <a href="#">terms of use</a> and
+                            our <a href="#">privacy policy</a>
+                        </p>
+                    </div>
+
+                    <button><a href="#">Submit</a></button>
+            </form>
+            <span class="Have-an_account">
+                <span> Already have an account?</span>
+                <p id="sign-up_link"><a href="#">Sign in</a></p>
+            </span>
+        </section>
+
+
+        <section class="box">
+            <div class="box2">
+                <img src="{% static './img/Group 112.png' %}" class="group">
+                <h3 class="hello"><strong>Hello, Friend!</strong><br> Enter you details and start your journey with us</h3>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
