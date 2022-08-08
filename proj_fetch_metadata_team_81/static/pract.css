@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar>div{
+    flex: 1;
+}
+
+nav{
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+.nav2{
+    display: flex;
+}
+.nav2>div{
+    flex: 1;
+    justify-content: space-between;
+}

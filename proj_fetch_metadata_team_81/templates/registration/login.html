@@ -1,0 +1,54 @@
+{% load static %}
+{% if request.user.is_authenticated %}
+<script>
+    window.location.href = '{% url "accounts:profile" %}';
+</script>
+{% endif %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Metadrix Sign-in Page</title>
+    <link href="{% static 'login.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main class="container">
+        <section class="image">
+            <img src="{% static './img/sign-in_page_img.png' %}">
+        </section>
+        <section class="signIn">
+            <img src="{% static './img/Logo.png' %}">
+
+            <h3>Sign in to MetaDrix </h3>
+
+            <form class="account-form sign-in" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {% if form.errors %}
+                <div class="alert alert-primary" role="alert">
+                    Error: Username or Password not correct!
+                </div>
+                {% endif %}
+                <label for="#" id="email">Username</label>
+                {{ form.username}}
+                <label for="#" class="pass">Password</label>
+                {{ form.password}}
+                <button type="submit" value="">Sign in</button>
+            </form>
+
+            <p id="forgot_password"><a href="">Forgot password?</a></p>
+            <span>
+                <strong>Don’t have an account?</strong>
+                <p id="sign-up_link"><a href="{% url 'accounts:register' %}">Sign up</a></p>
+            </span>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/153cb40420.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

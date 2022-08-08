@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+  font-size: 24px;
+ 
+}
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: -10vw;
+}
+
+.image {
+  margin: 0 100px 0 70px;
+}
+
+.image img {
+  width: 488.19px;
+  height: 553.21px;
+  left: 75.81px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+.signIn {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+    font-weight: 400;
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 28.44px;
+}
+
+.input_field {
+  width: 490px;
+  border: solid 1px grey;
+  padding: 10px 0;
+  padding-left: 45px;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+input#email {
+  background: url("./img/sms.png") no-repeat scroll 10px;
+  background-size: 25px;
+}
+
+input#email:focus {
+  background-image: none;
+}
+
+input#password {
+  background: url("./img/lock.png") no-repeat scroll 10px;
+  background-size: 25px;
+}
+
+input#password:focus {
+  background-image: none;
+}
+
+h3 {
+  color: #2b80ff;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42.66px;
+}
+
+p {
+  color: #5599ff;
+}
+
+#forgot_password {
+  font-size: 24px;
+  font-weight: 400;
+  align-self: flex-end;
+}
+
+button {
+    width: 100%;
+    background: #0066ff;
+    color: #fff;
+    padding: 9px 0 9px 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 26px;
+}
+
+button:active {
+  background-color: #5599ff;
+  /*   transition-delay: -2s; */
+  cursor: pointer;
+}
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p a {
+  color: #5599ff;
+  text-decoration: none;
+}
+
+p a:hover {
+  border-bottom: 1px solid #5599ff;
+}
+
+button:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+span {
+  display: flex;
+}
+
+#sign-up_link {
+  margin: 0;
+  margin-left: 5px;
+}
+
+@media (max-width: 1450px) {
+  .image img {
+    width: 400px;
+    height: auto;
+    margin: -50px;
+  }
+}
+
+@media (max-width: 1160px) {
+  main {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .signIn {
+    margin: 0 auto;
+    margin-top: 10vh;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  .image img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  main {
+    margin: 50px 20px;
+  }
+
+  .signIn {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    margin: 0 auto;
+   
+  }
+  .input_field {
+    width: 290px;
+    padding: 5px;
+  }
+
+  .sign-in {
+    width: 100%;
+    
+    
+  }
+
+  button {
+    width: 100%;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  #forgot_password {
+  font-size: 18px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+}
