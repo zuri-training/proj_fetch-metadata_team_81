@@ -11,9 +11,9 @@
 <body>
     <div class="open-mail">
         <img class="email-icon" src="/proj_fetch_metadata_team_81/images/Group 79.svg" alt="">
-        <h1>Check your email</h1>
-        <h3>A password reset link has been<br> <span class="h3">sent to your email</span> </h3>
-        <p>Didn't recieve the email? <span class="click">click to resend http://{{ domain }}{% url 'accounts:activate' uidb64=uid token=token %}</span></p>
+        <h1>Hello {{ user.get_username }}</h1>
+        <h3>Please use the link below<br> <span class="h3">to reset your password</span> </h3>
+        <p>From MetaDrix <span class="click"><a href="{{ protocol }}://{{ domain }}{% url 'accounts:pwdresetconfirm' uidb64=uid token=token %}">click to reset</a> </span></p>
     </div>
 </body>
 </html>
