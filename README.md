@@ -1,8 +1,8 @@
 # **PROJECT NAME: METADRIX**
-# **TEAM: TEAM 81**
+# **TEAM: 81**
 
 ## Project Brief
-> > > > <br>*Metadrix is a platform that extracts and displays the metadata of a particular file uploaded by a user. It allows the users to view the metadata, save it, download it, share it and convert it to any file format. Types of files that can be uploaded include images, csv, PDFs and JSON.* <br><Br>
+> >  <br>*Metadrix is a platform that extracts and displays the metadata of a particular file uploaded by a user. It allows the users to view the metadata, save it, download it, share it and convert it to any file format. Types of files that can be uploaded include images, csv, PDFs and JSON.* <br><Br>
 
 <br>
 
@@ -19,13 +19,13 @@
 It is quite an unusual request to ask for the metadata of a file but the need arises every now and then. Although there are quite a number of platforms that derive and synthesize relevant information from files, they are riddled with poor management of all metadata information and a less interactive interface which is unfriendly to the average user.<br><Br>
 
 
->>>>>> <br>*“I need not to be bothered with more problems when I want my problems solved. A platform that offers all the basics and covers all the surfaces.<br>
+>>>> <br>*“I need not to be bothered with more problems when I want my problems solved. A platform that offers all the basics and covers all the surfaces.<br>
 It would also be great if I could recover and have access to my files upon sign up and sign in which in itself is a form of commitment to offer up my personal details in the first place because loss is bound to happen.”<br><br>*
 
 <br><Br>
 ## Target Audience
-* Law enforcement agencies in Investigative considerations. <br>
-* File Analysts.
+* Law enforcement agencies in Investigative considerations. 
+* File Analysts.<br><br>
 
 ## Features 
 
@@ -35,13 +35,71 @@ It would also be great if I could recover and have access to my files upon sign 
 * Dashboard: it gives users complete access to the platform (this is where files can be uploaded, metadata extracted, downloaded, shared and converted). Users can also track their activities here. <br>
 * Contact us (where users can reach us) <br><br><br>
 
+# <a name="contribute"></a> Contribution Guide
+
+- Fork the project.
+
+- Clone your own forked repository, run:
+~~~
+$ git clone "https://github.com/[your_github_username]/proj_fetch-metadata_team_81.git"
+~~~
+- Add remote upstream using the command:
+~~~
+$ git remote add upstream "https://github.com/zuri-training/proj_fetch-metadata_team_81.git"
+~~~
+- run:
+~~~
+$ git fetch upstream (You must fetch from the develop branch before or after checkout)
+~~~
+- run:
+~~~
+$ git merge upstream/develop (Merge updates from upstream)
+$ git checkout -b ft-user-login (You are in the ft-user-login branch now)
+~~~
+  ## To push to github;<br/>
+~~~
+$ git add .
+$ git commit -m "feat: implemented user login"
+$ git pull origin ft-user-login (your forked version of the repository)
+$ git push origin ft-user-login (note how it ends with a branch.) 
+~~~
 
 
-## **USER RESEARCH**
+### Ensure your PR branch is titled in the following format<br/>
+~~~
+$ Ft-Feature (eg. "ft-user-login")
+~~~
+### Commit Message Format: `chore`, `feature`, `bug`
+
+For a feature:
+~~~
+$ git commit -m "feat: implemented user log-in"
+~~~
+For a bug: 
+~~~
+$ git commit -m "bug: fixed inconsistency in log in screen"
+~~~
+For a chore:
+~~~
+$ git commit -m "chore: updated read me to include API endpoints"
+~~~
+<br>
+
+## Create your PR to the `develop` branch of this repository.
+
+ When making a PR, your PR is expected to have the following comments:<br/>
+
+- What is the task completed ?
+- What the PR actually does ?
+- How can this PR be manually tested ?
+- Screenshots (if applicable)
+<br><br><br>
+
+# USER RESEARCH
 ## Research Plan for METADRIX (A Metadata Platform)
-### Idea brief: *Metadata platform to help improve customer experience when viewing and imputing metadata.*
-### **Client:** Zuri
-### **Role:** Product Designer <br><Br>
+### Idea brief: *Metadata platform to help improve customer experience when viewing and imputing metadata.*<br><br>
+### **Client:** `Zuri`
+### **Role:** `Product Designer` <br><Br>
 ## Research Background
 From my secondary research, mostly conducted through google searches to further understand the meaning and usage of a metadata platform, it has been noticed that some challenges faced by users of metadata platforms include: poor management of all metadata, lack of access, less interactive interface and complexity of metadata presentation(this breaks Millers’ Law because it gives users too many things to keep in their working memory. e.g …working memory, and according to him this leads to lack of interest*)<br><Br>
 
@@ -64,7 +122,7 @@ The recruitment will be done in two phases, the first is a Google forms question
 > * Milestone 1: Research and break down of data
 >> * Milestone 2: User journey and wireframes
 >>> * Milestone 3: Hi-Fi Designs
->>>> * Milestone 4: Prototype and Presentation of case study<br><br>
+>>>> * Milestone 4: Prototype and Presentation of case study
 
 <br>
 
@@ -94,11 +152,11 @@ Section 4: Wishlist of Features
 >* What features would aid your use of metadata platforms
 >* What are some features about metadata platforms that you dislike?
 >* Are there any features you think they should have which they don’t?
-I really appreciate this opportunity. Thank you for giving your time to helping me build a better product. If you have any questions, comments, or enquiries, feel free to Email me: @babajideoluwaferanmi301@gmail.com or call: 08079354136. Have a nice day!
+I really appreciate this opportunity. Thank you for giving your time to helping me build a better product.
 
-<br>
+<br><br>
 
-## Design Documentation 
+# Design Documentation 
 [Team](https://docs.google.com/spreadsheets/d/1XTySY9v9Um3r1PXwa9b3JnNb4IIwOWa_h4ZVisebvFY/edit#gid=0)
 
 [Figma Board](https://www.figma.com/file/G0uwfELRR8TT7hzV6NvJbQ/Team81_proj-fetch-metadata?node-id=730%3A32459)
