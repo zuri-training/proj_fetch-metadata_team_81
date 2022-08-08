@@ -1,0 +1,71 @@
+body{
+ margin: auto;
+ margin-left: 15vw;
+ margin-top: 2vh;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.logout-header{
+color: #010F23;
+font-size: 3.3vw;
+}
+.h1{
+ color:#0066FF;
+ 
+}
+.logout-container{
+ display: flex;
+}
+.login-btn{
+ border: none;
+ background-color:#0066FF;
+ color:#FAFAFA;
+}
+.go-back-home-btn{
+ border: solid 2px #0066FF ;
+ color: #0066FF;
+ background-color:#FAFAFA;
+ margin-left: 1vw;
+}
+.logout-btn{
+ height: 5.5vh;
+ width: 11vw;
+ font-size: 1vw;
+ font-weight: bold;
+ border-radius: 4px;
+ margin-top: 4vh;
+}
+.logout-img{
+ margin-left: 4.4vw;
+}
+@media only screen and (max-width: 768px){
+ body{
+  margin-left: 7vw;
+  margin-right: 7vw;
+ }
+.logout-header{
+ position: relative;
+ top: 20rem;
+ font-size: 7vw;
+}
+.logout-img{
+ position: relative;
+ object-fit: contain;
+ bottom: 15vh;
+}
+.btn-container{
+ display: flex;
+}
+.logout-container{
+ display: flex;
+ flex-direction: column;
+}
+.logout-btn{
+ position: relative;
+ bottom: -50vh;
+ width: 48vw;
+ font-size: 4.3vw;
+}
+.go-back-home-btn{
+ margin-left: 5vw;
+}
+}

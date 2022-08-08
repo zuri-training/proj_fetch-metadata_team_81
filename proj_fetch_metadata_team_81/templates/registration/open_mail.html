@@ -1,0 +1,20 @@
+{% autoescape off %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Email</title>
+    <link rel="stylesheet" href="open_mail.css">
+</head>
+<body>
+    <div class="open-mail">
+        <img class="email-icon" src="/proj_fetch_metadata_team_81/images/Group 79.svg" alt="">
+        <h1>Hello {{ user.get_username }}</h1>
+        <h3>Please use the link below<br> <span class="h3">to reset your password</span> </h3>
+        <p>From MetaDrix <span class="click"><a href="{{ protocol }}://{{ domain }}{% url 'accounts:pwdresetconfirm' uidb64=uid token=token %}">click to reset</a> </span></p>
+    </div>
+</body>
+</html>
+{% endautoescape %}
