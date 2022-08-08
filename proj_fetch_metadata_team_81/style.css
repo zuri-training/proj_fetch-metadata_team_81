@@ -6,12 +6,12 @@
 }
 
 body{
-    background-color: #E9E9E9;
+    background-color: white;
     font-family: 'Rubik', sans-serif;
-}
-
-main{
-    margin-top: 10%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .first{
@@ -22,6 +22,8 @@ main{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 img{
@@ -33,98 +35,114 @@ h4{
     font-size: 40px;
     font-weight: 700;
     color: #2B3748;
-    line-height: 47px;
+    line-height: 36px;
+    margin: 30px 0 10px 0;
 }
 
 p{
-    font-size: 32px;
-    font-weight: 400;
-    color: #AAAFB6;
+    font-size: 24px;
+    font-weight: 300;
+    color:#AAAFB6;
+    margin-top: 12px;
+
 }
 
-.second{
-    margin-top: 20px;
-}
 
 input, button{
+    /* width: 100%; */
     width: 772px;
-    height: 70px;
-    font-size: 32px;
-    border: 1px solid #010F23;
+    font-size: 30px;
+    border: 1px solid #2B3748;
     border-radius: 8px;
     margin-bottom: 20px;
+    padding: 20px 0;
 }
 
 label{
-    font-size: 32px;
+    font-size: 30px;
     color: #010F23;
-    font-weight: 400;
+    font-weight: 450;
     line-height: 38px;
 }
 
 input{
     padding-left: 10px;
-    margin-top: 10px;
+    margin: 30px 0;
     color: #AAAFB6;
     font-weight: 400;
-    background-color: #E9E9E9;
 }
 
 button{
     background-color: #FFCC80;
-    font-weight: 500;
+    color: #2B3748;
+    font-weight: 600;
+    margin: 0;
+    transition: 100ms;
 }
 
 button:hover{
     background: #FFCC80;
     border: 1px solid #2B3748;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
+    box-shadow: 0.5px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /******Media queries*********/
-@media screen and (max-width: 480px) {
-    body{
-        background-color: #FFFFFF;
-    }
-    img {
-        width: 70px;
-        height: 70px;
-        margin: 70px 0 40px;
+@media screen and (max-width:900px){
+    
+    .first {
+        width: 600px;
     }
 
     h4 {
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    
+    input, button {
+        width: 600px;
     }
 
     p {
-        font-size: 20px;
-        text-align: left;
-        margin-left: 12%;
+       font-size: 22px;
+       margin: 0;
+
+        /* text-align: left; */
     }
 
-    input{
-        margin-bottom: 40px;
-        background-color: #FFFFFF;
-        color: #808791;
-    }
-
-    button{
-        border: none;
-        color: #2B3748;
+    label, input, button {
+        font-size: 22px;
     }
 
     input, button {
-        width: 304px;
-        height: 40px;
-        font-size: 20px;
-        font-weight: 400;
+        padding: 10px 0;
+        margin: 10px 0;
     }
 
-    label {
-        font-size: 20px;
-        color: #010F23;
-        line-height: 23px;
+}
+
+@media screen and (max-width: 650px){
+    .first {
+        width: 500px;
+    }
+
+    input, button {
+        width: 500px;
+    }
+
+    /* p {
+        text-align: left;
+    } */
+}
+
+@media screen and (max-width: 550px){
+    .first {
+        width: 400px;
+    }
+
+    input, button {
+        width: 400px;
+    }
+
+    p {
+        text-align: left;
     }
 }
