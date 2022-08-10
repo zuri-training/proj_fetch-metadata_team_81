@@ -4,9 +4,6 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Rubik';
-    /* overflow-x: hidden; */
-    /* margin: 0;
-    padding: 0; */
 }
 
 * {
@@ -21,6 +18,10 @@ html, body {
     padding: 30px;
     border-right: #bfb9b9 1px solid;
 }
+.clicked{
+    color: #0066FF;   
+}
+
 .scrollbar {
     margin-left: auto;
 }
@@ -42,10 +43,21 @@ html, body {
 }
 .ic {
     width: 100%;
+    cursor: pointer;
+    
 }
 .icon {
-    width: 24px;
+    width: 1.5vw;
+    cursor: pointer;   
 }
+a{
+text-decoration: none;
+color:black;
+}
+.icon {
+    color: #0066FF;
+}
+
 .load {
     padding: 20px;
     height: 21%;
@@ -72,7 +84,7 @@ html, body {
 }
 .linee {
     height: 1px;
-    width: 90%;
+    width: 100%;
     margin-left: 15px;
 }
 .t {
@@ -165,35 +177,227 @@ input[type="file"]{
 .help {
     font-size: 48px;
     font-weight: 600;
+    margin-left: 80px;
+    margin-top: 5vh;
 }
 .freq {
     font-size: 35px;
     margin-top: 30px;
     margin-bottom: 50px;
+    margin-left: 80px;
     font-weight: 600;
 }
 .types {
     background-color: #e7e9eb;
-    height: 80px;
     border-radius: 6px;
-    width: 85%;
-    margin-bottom: 20px;
-    padding: 15px;
+    width: 80%;
+    margin-left: 80px;
+    
 }
-
-.miac {
-    width: 36px;
-    float: right;
-    position: relative;
-    bottom: 38px
+.answer{
+    padding-left: 80px;
+    padding-right: 23px;
+    background-color: #F6F9FF;
+    font-size: x-large;
+    max-height: 0;
+    overflow: hidden;
 }
-
-.mia {
-    width: 100%;
+.answer p{
+    padding-top: 23px;
+    padding-bottom: 23px;
 }
-
+.close-drop-down{
+    display: none;
+}
+.close{
+    display: none;
+}
+.open{
+display: block;
+}
 .dami {
     font-size: 30px;
-    margin-left: 15px;
+    padding-top: 20px;
+    margin: 30px;
+    margin-left: 80px;
     font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.open-answer{
+   max-height: 20rem; 
+}
+
+.files{
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.file-search{
+    border-radius: 8px;
+    height: 6vh;
+    width: 25vw;
+    margin-left: 52vw;
+    padding-left: 2.5rem;
+    margin-bottom: 9vh;
+    border: none;
+    background-color: #F3F8FF;;
+
+}
+.view-sort{
+    display: flex;
+    width: 8vw;
+    justify-content: space-between;
+    margin-left:69vw ;
+
+}
+.view-sort span{
+    padding-left: 15px;
+}
+
+.file-one {
+  grid-area:one;
+ 
+
+}
+.file-two {
+  grid-area: two;
+ 
+}
+.file-three{
+   grid-area:three;
+}
+.file-four {
+   grid-area:four;
+}
+.file-five {
+   grid-area:five;
+}
+.file-six{
+   grid-area:six
+}
+.files-container{
+    width: 80%;
+  display: grid;
+  grid-template-areas: 'one two three' 
+                       'four five six'
+                       ;
+  grid-gap: 15px;
+  margin: 4vw 4vh;
+}
+.size{
+    width: 27vw;
+}
+.size h3{
+    padding-top: 3vh;
+}
+.file-button{
+display: flex;
+justify-content: space-between;
+width: 19vw;
+margin-bottom: 10vh;
+}
+
+.file-button button{
+border: none;
+border-radius: 5px;
+background-color: #0066FF;
+width: 8.5vw;
+height: 6vh;
+color: #e7e9eb;
+}
+.size img{
+    width: 19vw;
+}
+.head{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4vw;
+}
+#activity{
+    margin-top: 9vh;
+    padding-bottom: 15vh;
+    height: fit-content;
+}
+.tag h1{
+    font-size: 3rem;
+    margin: 2vh 4vw;
+}
+img.search-bar{
+    position: relative;
+    left: 40px;
+}
+input#search{
+    margin-bottom: 7vh;
+    width: 500px;
+    height: 40px;
+    padding-inline-start: 3vw;
+    background: #F3F8FF;
+    border: none;
+    border-color: #F3F8FF;
+    border-radius: 8px;
+}
+.sort{
+    display: flex;
+    gap: 1%;
+    justify-content: flex-end;
+    margin-right: 4vw;
+}
+.sort p{
+    font-size: 18px;
+    color:  #565F6C;
+    padding-top: 2vh;
+}
+td.hr{
+    padding: 0%;
+}
+tr.header{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color:  #565F6C;
+}
+.tableRows{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    color: #2B3748;
+}
+.format{
+    display: flex;
+    gap: 10px;
+    margin-top: 0%;
+    padding: 0%;
+    margin-bottom: 1%;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+    border-style: none;
+    border: hidden;
+}
+.table-container{
+      padding-left: 4vw;
+      width: 78vw;
+}
+th,
+td {
+    border: 1px solid white;
+    /* border-collapse: collapse; */
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+
+}
+tr{
+    margin-top: 5em;
+    
+
 }

@@ -64,7 +64,7 @@ hr {
 }
 
 hr:not([size]) {
-  /*height: 1px;*/
+  height: 1px;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -198,19 +198,6 @@ sub {
 
 sup {
   top: -0.5em;
-}
-
-a {
-  color: #0d6efd;
-  text-decoration: underline;
-}
-a:hover {
-  color: #0a58ca;
-}
-
-a:not([href]):not([class]), a:not([href]):not([class]):hover {
-  color: inherit;
-  text-decoration: none;
 }
 
 pre,
@@ -1934,7 +1921,7 @@ progress {
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
-  background-color: var(--bs-table-bg);
+  /* background-color: var(--bs-table-bg); */
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
