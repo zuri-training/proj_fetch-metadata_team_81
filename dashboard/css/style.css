@@ -1,9 +1,10 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: 90vh;
     font-family: 'Rubik';
+    margin: 0;
 }
 
 * {
@@ -11,7 +12,9 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
-
+.dashboard-container{
+    padding-left: 23vh;
+}
 .sidebar {
     height: 100vh;
     position: fixed;
@@ -23,7 +26,7 @@ html, body {
 }
 
 .scrollbar {
-    margin-left: auto;
+    margin-left: 8vw;
 }
 .logo {
     width: 100%;
@@ -34,7 +37,7 @@ html, body {
 .m {
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 .mm {
     font-family: 'Rubik', sans-serif;
@@ -104,29 +107,32 @@ color:black;
     bottom: 47px;
 }
 .mim {
-    width: 336px;
+    width: 340px;
+    
 }
 .mi{
-    width:100%;
+    width:110%;
 }
 .arrow {
     width: 81px;
     position: relative;
-    left: 413px;
-    bottom: 200px;
+    left: 503px;
+    bottom: 260px;
 }
 .detail {
     position: relative;
-    width: 419px;
-    padding: 148px;
-    height: 373px;
-    left: 564px;
+    margin: 0;
+    width: 680px;
+    padding: 20px 148px;
+    height: 400px;
+    left: 715px;
     background-color: aliceblue;
     text-align: center;
-    bottom: 418px;
+    bottom: 447px;
     border: 2px #d2cece solid;
 }
 .metadata{
+    
 
 }
 input[type="file"]{
@@ -145,43 +151,47 @@ input[type="file"]{
     padding: 5px;
     text-align: center;
     bottom: 119px;
-    left: 125px;
+    left: 157px;
 }
 .search {
     position: relative;
-    bottom: 362px;
-    left: 597px;
+    bottom: 423px;
+    left: 712px;
     background-color: #F3F8FF;
     border: 0px;
-    border-radius: 3px;
-    width: 341px;
-    height: 34px;
+    border-radius: 7px;
+    width: 684px;
+    height: 44px;
+    padding-left: 54px;
 }
 .recent {
     font-size: 35px;
     font-weight: 600;
     position: relative;
-    bottom: 289px;
+    bottom: 400px;
 }
 .filespace {
     background-color: #F3F8FF;
-    width: 90%;
+    width: 120%;
     position: relative;
-    height: 80vh;
+    height: 40vh;
     font-size: 23px;
     padding: 40px;
     font-weight: 200;
-    bottom: 237px;
+    bottom: 297px;
     text-align: center;
 }
 .help {
     font-size: 48px;
     font-weight: 600;
-    margin-left: 80px;
+    padding-left: 10vw;
     margin-top: 5vh;
 }
+.help h1{
+    padding-left: 4vw;
+}
 .freq {
-    font-size: 35px;
+    font-size: 32px;
     margin-top: 30px;
     margin-bottom: 50px;
     margin-left: 80px;
@@ -198,13 +208,15 @@ input[type="file"]{
     padding-left: 80px;
     padding-right: 23px;
     background-color: #F6F9FF;
-    font-size: x-large;
+    font-size: 1.4rem;
+    font-weight: lighter;
     max-height: 0;
     overflow: hidden;
 }
 .answer p{
     padding-top: 23px;
     padding-bottom: 23px;
+    font-weight: medium;
 }
 .close-drop-down{
     display: none;
@@ -231,7 +243,7 @@ display: block;
 }
 
 .files{
-    padding: 2rem;
+    padding: 2vh 11vw;
     margin: 0 auto;
 }
 
@@ -239,7 +251,7 @@ display: block;
     border-radius: 8px;
     height: 6vh;
     width: 25vw;
-    margin-left: 52vw;
+    margin-left: 47vw;
     padding-left: 2.5rem;
     margin-bottom: 9vh;
     border: none;
@@ -250,7 +262,7 @@ display: block;
     display: flex;
     width: 8vw;
     justify-content: space-between;
-    margin-left:69vw ;
+    margin-left:64vw ;
 
 }
 .view-sort span{
@@ -279,7 +291,7 @@ display: block;
    grid-area:six
 }
 .files-container{
-    width: 80%;
+  width: 100%;
   display: grid;
   grid-template-areas: 'one two three' 
                        'four five six'
@@ -288,7 +300,7 @@ display: block;
   margin: 4vw 4vh;
 }
 .size{
-    width: 27vw;
+    width: 25vw;
 }
 .size h3{
     padding-top: 3vh;
@@ -296,7 +308,7 @@ display: block;
 .file-button{
 display: flex;
 justify-content: space-between;
-width: 19vw;
+width: 18vw;
 margin-bottom: 10vh;
 }
 
@@ -304,21 +316,22 @@ margin-bottom: 10vh;
 border: none;
 border-radius: 5px;
 background-color: #0066FF;
-width: 8.5vw;
+width: 8.2vw;
 height: 6vh;
 color: #e7e9eb;
 }
 .size img{
-    width: 19vw;
+    width: 18vw;
 }
 .head{
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-    margin-right: 4vw;
+    /* margin-right: 4vw; */
 }
 #activity{
     margin-top: 9vh;
+    padding-left: 9vw;
     padding-bottom: 15vh;
     height: fit-content;
 }
@@ -339,12 +352,14 @@ input#search{
     border: none;
     border-color: #F3F8FF;
     border-radius: 8px;
+    margin-left: 28.5vw;
 }
 .sort{
     display: flex;
     gap: 1%;
-    justify-content: flex-end;
-    margin-right: 4vw;
+    /* justify-content: flex-end; */
+    margin-left: 71vw;
+    margin-bottom: 5vh;
 }
 .sort p{
     font-size: 18px;
@@ -382,7 +397,7 @@ table{
 }
 .table-container{
       padding-left: 4vw;
-      width: 78vw;
+      width: 74vw;
 }
 th,
 td {

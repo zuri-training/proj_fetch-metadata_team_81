@@ -35,6 +35,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -229,7 +230,7 @@ code {
   word-wrap: break-word;
 }
 a > code {
-  color: inherit;
+  /* color: inherit; */
 }
 
 kbd {
@@ -277,8 +278,8 @@ tfoot,
 tr,
 td,
 th {
-  border-color: inherit;
-  border-style: solid;
+  border-color: none;
+  /* border-style: solid; */
   border-width: 0;
 }
 
@@ -1358,7 +1359,7 @@ progress {
 
   .col-lg-10 {
     flex: 0 0 auto;
-    width: 83.3333333333%;
+    width: 90.3333333333%;
   }
 
   .col-lg-11 {
