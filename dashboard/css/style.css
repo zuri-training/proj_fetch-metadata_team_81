@@ -525,7 +525,16 @@ tr {
 .body{
     width: 100%;
      }
-div{
+.sidebar{
     visibility: hidden;
   } 
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ .body{
+    width: 100%;
+     }
+hr{
+    visibility: hidden;
+}
+    }

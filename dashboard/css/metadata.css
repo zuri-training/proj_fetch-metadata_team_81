@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 body{
- width: 100%;
+ width: 99%;
  font-family: "Rubik";
 }
 .metadata-container{
@@ -10,7 +10,7 @@ body{
  flex-direction: column;
  justify-content: center;
  align-items: center;
- padding: 2vh 19vw;
+ padding: 2vh 15vw;
 }
 
 .metadata-container th{
@@ -20,7 +20,7 @@ body{
 }
 .metadata-container td{
  font-size: xx-large;
- padding: 1vh 7vw;
+ padding: 1vh 3vw 1vh 4vw;
 
 }
 
@@ -81,7 +81,7 @@ body{
 }
 .metadata-container td{
  font-size: x-large;
- padding: 1vh 5vw;
+ padding: 1vh 2vw 1vh 5vh;
 
 }
 
