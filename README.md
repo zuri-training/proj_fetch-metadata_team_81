@@ -1,5 +1,5 @@
 # **PROJECT NAME: METADRIX**
-# **TEAM: 81**
+# **TEAM: TEAM_81**
 
 ## Project Brief
 > >  <br>*Metadrix is a platform that extracts and displays the metadata of a particular file uploaded by a user. It allows the users to view the metadata, save it, download it, share it and convert it to any file format. Types of files that can be uploaded include images, csv, PDFs and JSON.* <br><Br>
