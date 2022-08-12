@@ -71,27 +71,67 @@
         <div class="emojil">
           <img class="emoji" src="emoji.png" alt="Alternate Text" />
         </div>
-        <div class="mim">
+    <div class="upload-container">
+        <div class="upload-box">
+            <div class="mim">
           <img class="mi" src="metadata.png" alt="Alternate Text" />
         </div>
         <label class="push">
           <input type="file" name="" value="" placeholder="" />
           Upload a file
         </label>
+         <div class="file-upload">
+            <button>Convert</button>
+            <button>Delete</button>
+        </div>
+        <img class="convert" src="convertshape.svg" alt="">
+            <img class="trash" src="trash.svg" alt="">
+
+        </div>
+        
         <div class="arrow">
           <img class="ic" src="arrow.png" alt="Alternate Text" />
         </div>
-        <div class="detail">
-          <span class="metadata"> No file chosen </span>
+
+        <div class="upload-detail">
+            <div class="metadata">
+                <table class="metadata-table">
+                    <tr>
+                        <td>Filename:</td>
+                        <td>Guitar.jpg</td>
+                    </tr>
+                    <tr>
+                        <td>File size:</td>
+                        <td>315 KB (322163 bytes)</td>
+                    </tr>
+
+                </table>
+            </div>
+            <img class="alert" src="Group 130.svg" alt="Alternate Text" />
+            <span class="terms">All of the metadata that we were able to automatically extract from your file is shown above. It might not be sufficient or complete. In the past, metadata could have been altered or removed. Please note that the metadata is offered without warranty or guarantee.</span>
+            
+            <input class="search" type="text" placeholder="Search Files"/>
+            <div class="meta-details">
+                <img class="copy" src="copy.svg" alt="">
+                <img class="share" src="share.svg" alt="">
+            <button>Extract</button>
+            <button>Share</button>
+            </div>
         </div>
-        <input
-          class="search"
-          type="text"
-          name="Name"
-          placeholder="Search Files"
-        />
+    </div>
+       
+        
+        
         <div class="recent">Recent Activity</div>
-        <div class="filespace">No recent activity</div>
+        <div class="filespace">
+            
+                <table class="recent-activity">
+                    No recent activity
+
+                </table>
+            
+            
+        </div>
 </div>
 <div class="files" id="files">
     <input class="file-search" placeholder="Search Files" type="text">
@@ -113,7 +153,7 @@
     </div>
     <div class="file-two size">
         <img src="Group 131.png" alt="">
-        <h3>Guitar.jpg</h3>
+        <h3>Manual.pdf</h3>
         <p>28-07-2022</p>
         <div class="file-button">
             <button>Extract</button>
@@ -122,8 +162,8 @@
     </div>
      <div class="file-three size">
         <img src="Rectangle 197.png" alt="">
-        <h3>Guitar.jpg</h3>
-        <p>28-07-2022</p>
+        <h3>Ocean.png</h3>
+        <p>27-07-2022</p>
         <div class="file-button">
             <button>Extract</button>
             <button>Download </button>
@@ -131,8 +171,8 @@
     </div>
      <div class="file-four size">
         <img src="Group 131.png" alt="">
-        <h3>Guitar.jpg</h3>
-        <p>28-07-2022</p>
+        <h3>Secret business.pdf</h3>
+        <p>27-07-2022</p>
         <div class="file-button">
             <button>Extract</button>
             <button>Download</button>
@@ -140,8 +180,8 @@
     </div>
      <div class="file-five size">
         <img src="Group 131.png" alt="">
-        <h3>Guitar.jpg</h3>
-        <p>28-07-2022</p>
+        <h3>Making money.pdf</h3>
+        <p>26-07-2022</p>
         <div class="file-button">
             <button>Extract</button>
             <button>Download</button>
@@ -149,8 +189,8 @@
     </div>
      <div class="file-six size">
         <img src="Group 131.png" alt="">
-        <h3>Guitar.jpg</h3>
-        <p>28-07-2022</p>
+        <h3>Good life of a designer.pdf</h3>
+        <p>25-07-2022</p>
         <div class="file-button">
             <button>Extract</button>
             <button>Download</button>
@@ -307,9 +347,11 @@
           </div>
           <div class="answer">
             <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+            Metadata summarizes basic information about data, which can make it easier to find, use and reuse particular instances
+            of data.
+            For example, author, date created, date modified and file size are examples of very basic document file metadata. Having
+            the ability to search for a particular element (or elements) of that metadata makes it much easier for someone to locate
+            a specific document.
             </p>
           </div>
         </div>
@@ -334,12 +376,43 @@
           </div>
           <div class="answer">
             <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+            Yes, it supports all forms of pictures and videos file format.
             </p>
           </div>
         </div>
+        
+        
+        <div class="settings-container" id="settings">
+        <h1>Settings</h1>
+        <div class="setting-menu">
+            <div class="icon-header">
+            <img src="user.svg" alt="">
+            <h4>Account</h4>
+            </div>
+            <img class="drop-down" src="arrow-down.svg" alt="Alternate Text" />
+        </div>
+        <div class="setting-menu">
+            <div class="icon-header">
+            <img src="shield-security.svg" alt="">
+            <h4>Security</h4>
+            </div>
+            <img class="drop-down" src="arrow-down.svg" alt="Alternate Text" />
+        </div>
+        <div class="setting-menu">
+            <div class="icon-header">
+            <img src="global.svg" alt="">
+            <h4>General</h4>
+            </div>
+            <img class="drop-down" src="arrow-down.svg" alt="Alternate Text" />
+        </div>
+        <div class="setting-menu">
+             <div class="icon-header">
+            <img src="shield.svg" alt="">
+            <h4>Legal</h4>
+            </div>
+            <img class="drop-down" src="arrow-down.svg" alt="Alternate Text" />
+        </div>
+      </div>
       </div>
       </div>
     </div>

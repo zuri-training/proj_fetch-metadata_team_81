@@ -1,4 +1,4 @@
-const iconClick = document.querySelectorAll('.icon')
+const iconClick = document.querySelectorAll('.not')
 const dropDown = document.querySelectorAll('.dami');
 const answer = document.querySelectorAll('.answer')
 
