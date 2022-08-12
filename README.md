@@ -159,6 +159,8 @@ I really appreciate this opportunity. Thank you for giving your time to helping 
 # Design Documentation 
 [Team](https://docs.google.com/spreadsheets/d/1XTySY9v9Um3r1PXwa9b3JnNb4IIwOWa_h4ZVisebvFY/edit#gid=0)
 
+[Figjam board](https://www.figma.com/file/WVx8Ffc1Ay9X1n5COCeI9F/TEAM-81-USER-RESEARCH?node-id=0%3A1)
+
 [Figma Board](https://www.figma.com/file/G0uwfELRR8TT7hzV6NvJbQ/Team81_proj-fetch-metadata?node-id=730%3A32459)
 
 [User Research plan](https://docs.google.com/document/d/1ldFvCMjYGGkGMnb8vzSOZgfVgUHv4qxOx1Ptkd38e1A/edit?usp=drivesdk)
