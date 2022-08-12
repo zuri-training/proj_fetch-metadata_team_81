@@ -19,5 +19,3 @@ dropDown.forEach((element) => {
   e.currentTarget.parentElement.lastElementChild.classList.toggle("open-answer")
   });
 });
-
-
