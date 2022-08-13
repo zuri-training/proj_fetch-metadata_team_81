@@ -1,0 +1,402 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/styledash.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrapdash.css' %}" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-lg-2 sidebar">
+            <div class="logocont">
+                <img class="logo" src="{% static './dashimg/Logo.png' %}" alt="Alternate Text" />
+            </div>
+            <div class="m">Menu</div>
+            <div class="load">
+                <div class="icon clicked">
+                    <img class="ic" src="{% static './dashimg/activity.png' %}" alt="Alternate Text" /><a
+                        href="#dashboard" class="not">Dashboard</a>
+                </div>
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/folder.png' %}" alt="Alternate Text" /><a href="#files"
+                        class="not">Files</a>
+                </div>
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/candle.png' %}" alt="Alternate Text" /><a c
+                        href="#activity" class="not">Activity</a>
+                </div>
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/message-text.png' %}" alt="Alternate Text" /><a
+                        href="#documentation" class="not">Documentation</a>
+                </div>
+            </div>
+            <hr class="line" />
+            <div class="mm">Tools</div>
+            <div class="loadd">
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/messages.png' %}" alt="Alternate Text" />
+                    <a class="not" href="#help-support">Help & Support</a>
+                </div>
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/setting-3.png' %}" alt="Alternate Text" /><a
+                        href="#settings" class="not">Settings</a>
+
+                </div>
+            </div>
+            <hr class="linee" />
+
+            <div class="loaddd">
+                <div class="icon">
+                    <img class="ic" src="{% static './dashimg/logout.png' %}" alt="Alternate Text" /><a href="{% url "
+                        logout" %}" class="not">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-10 scrollbar">
+            <div class="dashboard-container">
+                <div class="dashboard-content">
+                <div class="m t" id="dashboard">Welcome back!</div>
+                <div class="name">Optimust</div>
+                <div class="emojil">
+                    <img class="emoji" src="{% static './dashimg/emoji.png' %}" alt="Alternate Text" />
+                </div>
+                <div class="mim">
+                    <img class="mi" src="{% static './dashimg/metadata.png' %}" alt="Alternate Text" />
+                </div>
+                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input class="push" type="file" name="myfile" value="" placeholder="Report Attachment"
+                        enctype="multipart/form-data">
+                    <a href="{% url 'upload' %}"> <button type="submit" class="push">Analyse</button></a>
+                </form>
+                <div class="arrow">
+
+
+                    <img class="ic" src="{% static './dashimg/arrow.png' %}" alt="Alternate Text" />
+                </div>
+                <div class="detail">
+                    <table border="1" style="width:50%; margin:auto;">
+                        <tbody class="metadata">
+                            {% for data in metadata %}
+                            <tr class="metadata_details">
+                                <td>{{data.tag_name}}</td>
+                                <td>{{data.tag_value}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <input class="search" type="text" name="Name" placeholder="Search Files" />
+                <div class="recent">Recent Activity</div>
+                <div class="filespace">No recent activity</div>
+            </div> 
+
+            <div class="files" id="files">
+                <input class="file-search" placeholder="Search Files" type="text">
+                <div class="view-sort">
+                    <span>View</span>
+                    <img src="{% static './dashimg/element-3.svg' %}" alt="">
+                    <span>Sort</span>
+                    <img src="{% static './dashimg/frame.svg' %}" alt="">
+                </div>
+                <div class="files-container">
+                   
+
+                       
+                            {% if files %}
+                            {% for file in files %}
+
+       
+                            <div class=" ">
+                                
+                                    <div class="file-one size">
+                                        {% if file.myfile %}
+                                        <img src="{{ file.myfile.url }}" alt="jpeg">
+                                        {% else %}
+                                        <img src="{% static './dashimg/Rectangle 195.png' %}" alt="">
+                                        {% endif %}
+                                        <h3>{{ file.filename }}</h3>
+                                        <p>{{ file.date_uploaded }}</p>
+                                        <div class="file-button">
+                                            {% if file.myfile %}
+                                            <form action="{% url 'upload' %}" method="POST">
+                                                {% csrf_token %}
+                                                <input type="text" name="mename" value="{{ file.myfile }}"
+                                                    style="display: none" />
+                                                <button type="submit">Extract</button>
+                                            </form>
+                                            <a href="{{ file.myfile.url }}" download><button>Download</button></a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                              
+
+                            </div>
+
+                            {% endfor %}
+                            {% endif %}
+                        
+                    
+                </div>
+                {% if is_paginated %}
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+                    {% for i in paginator.page_range %}
+                    {% if page_obj.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">Next</span></span></li>
+                    {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div id="activity">
+                <div class="head">
+                    <div class="tag">
+                        <h1>Activities</h1>
+                    </div>
+                    <div class="input">
+                        <input type="search" name="search" placeholder="Search Files" id="search">
+                    </div>
+                </div>
+                <div class="sort">
+                    <p>Sort</p>
+                    <img src="{% static './dashimg/sort.svg' %}" alt="">
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <tr class="header">
+                                <th>Date</th>
+                                <th>File name</th>
+                                <th>File type</th>
+                            </tr>
+    
+                        </thead>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                        <tbody>
+                            {% if files %}
+                            {% for file in files %}
+                            <tr class="tableRows">
+                                <td>{{ file.date_uploaded }}</td>
+                                <td>{{ file.filename }}</td>
+                                <td>
+                                    <div class="format">
+                                        <img src="{% static './dashimg/jpeg.svg' %}" alt="jpeg">
+                                        <span>{{file.filetype}}</span>
+                                    </div>
+                                </td>
+                            </tr>
+    
+                            {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+                {% if is_paginated %}
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                    <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+                    {% for i in paginator.page_range %}
+                    {% if page_obj.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">Next</span></span></li>
+                    {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                    <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+            </div>
+
+
+
+
+
+
+
+            
+         <div class="help" id="help-support">
+            <h1>Help & Support</h1>
+            <div class="freq">Frequently Asked Questions (FAQ)</div>
+            <div class="types">
+                <div class="dami">
+                    How do I read Metadata?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+                </div>
+                <div class="answer">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ratione fugiat perferendis magni
+                        autem accusantium vel suscipit illum aperiam ipsum laborum dolores laudantium! Minima, incidunt
+                        dolore totam mollitia tenetur sed!
+                        Corrupti, aperiam aut! Sequi molestiae eligendi omnis dolorem autem deserunt dignissimos!
+                        Possimus illum voluptate sapiente corporis eligendi id officiis dolor! Unde assumenda tempora
+                        porro, facere laboriosam tenetur inventore quo adipisci.
+                    </p>
+
+                </div>
+            </div>
+            <div class="types">
+                <div class="dami">
+                    Are my files secured?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+
+                </div>
+
+                <div class="answer">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                        voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                        labore praesentium officiis ipsa? Praesentium.
+                        Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam
+                        temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
+                        Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis
+                        illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit
+                        voluptatibus sunt ex tenetur!
+                    </p>
+                </div>
+            </div>
+            <div class="types">
+                <div class="dami">
+                    What file format can I upload?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+                </div>
+                <div class="answer">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                        voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                        labore praesentium officiis ipsa? Praesentium.
+                        Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam
+                        temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
+                        Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis
+                        illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit
+                        voluptatibus sunt ex tenetur!
+                    </p>
+                </div>
+            </div>
+
+            <div class="types">
+                <div class="dami">
+                    What is a Metadata?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+                </div>
+                <div class="answer">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                        voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                        labore praesentium officiis ipsa? Praesentium.
+                        Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam
+                        temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
+                        Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis
+                        illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit
+                        voluptatibus sunt ex tenetur!
+                    </p>
+                </div>
+            </div>
+            <div class="types">
+                <div class="dami">
+                    Hidden data in document?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+                </div>
+                <div class="answer">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                        voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                        labore praesentium officiis ipsa? Praesentium.
+                        Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam
+                        temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
+                        Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis
+                        illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit
+                        voluptatibus sunt ex tenetur!
+                    </p>
+                </div>
+            </div>
+            <div class="types">
+                <div class="dami">
+                    Does it support all pictures and videos file format?
+                    <img class="drop-down" src="{% static './dashimg/arrow-down.svg' %}" alt="Alternate Text" />
+                    <img class="close-drop-down" src="{% static './dashimg/add.svg' %}" alt="">
+                </div>
+                <div class="answer">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                        voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                        labore praesentium officiis ipsa? Praesentium.
+                        Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam
+                        temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
+                        Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis
+                        illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit
+                        voluptatibus sunt ex tenetur!
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+
+        
+    </div>
+    <script src="{% static './js/dashboard.js' %}"></script>
+</body>
+
+</html>
