@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 body{
- width: 99%;
+ margin: auto;   
+ width: 90%;
  font-family: "Rubik";
+}
+.meta-logo{
+    height: 12vh;
 }
 .metadata-container{
  margin: auto;
@@ -32,9 +36,9 @@ body{
 .metadata-table tr:nth-child(even) {
     background-color: #FAFAFA;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 765px) {
 .body{
-    width: 100%;
+    width: 90%;
      }
  .metadata-container{
  margin: auto;
@@ -44,27 +48,20 @@ body{
  align-items: center;
  padding: 2vh 2vw;
 }
-.metadata-table{
-    font-size: medium;
-    width: 95%;
-}
+
 .metadata-container th{
- font-size: xx-large;
+ font-size: x-large;
  padding: 2vh 2vw;
 }
 .metadata-container td{
- font-size: large;
+ font-size: small;
  padding: 1vh 2vw;
 
 }
 
 }
 @media (min-width: 768px) and (max-width: 1024px) {
- .body{
-    width: 100%;
-     }
  .metadata-container{
- margin: auto;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -73,7 +70,7 @@ body{
 }
 .metadata-table{
     font-size: medium;
-    width: 95%;
+    width: 90%;
 }
 .metadata-container th{
  font-size: xx-large;
