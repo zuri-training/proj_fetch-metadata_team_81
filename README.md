@@ -131,7 +131,7 @@ $ pip install mutagen
 $ pip install ffmpeg-python
 $ pip install whitenoise
 $ pip install jsonfield
-$ pip install html2pdf
+$ pip install xhtml2pdf
 ```
 Next you run migrations by running the command:
 ```
