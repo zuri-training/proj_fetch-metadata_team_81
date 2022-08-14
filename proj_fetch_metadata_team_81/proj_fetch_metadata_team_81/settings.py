@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'upload',
+    'matadata',
+    
 ]
 
 MIDDLEWARE = [
@@ -128,9 +131,19 @@ MEDIA_URL='/media/'
 LOGIN_REDIRECT_URL='accounts:profile'
 LOGIN_URL='login'
 LOGOUT_URL='logout'
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+#Email Settings
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT='587'
+EMAIL_HOST_USER='ajadimarvellousgo@gmail.com'
+EMAIL_HOST_PASSWORD='oawhmfkqtpijonbf'
+EMAIL_USE_TSL=True
+EMAIL_USE_SSL=False

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaData</title>
+    <link rel="stylesheet" href="{% static 'css/metadata.css' %}">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+    </style>
+</head>
+<body>
+    <div class="metadata-container">
+        <div style="width: 40%;"><img style="
+    width: 100%;
+"src="{% static './dashimg/Logo.png' %}" alt=""></div>
+        <table class="metadata-table">
+            <tr>
+                <th colspan="3">MetaData</th>
+            </tr>
+            {% for data in metadata %}
+            <tr>
+                <td>{{data.tag_name}}:</td>
+                <td>{{data.tag_value}}</td>
+            </tr>
+            {% endfor %}
+
+
+        </table>
+        <a href="{% url 'createpdf'%}"><button style="border: none; border-radius: 5px; background-color: #0066FF; width: 8.2vw; height: 6vh; color: #e7e9eb;">Download</button></a>
+    </div>
+
+</body>
+</html>

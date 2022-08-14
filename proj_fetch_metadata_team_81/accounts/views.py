@@ -19,7 +19,7 @@ from .tokens import account_activation_token
 @login_required
 def profile(request):
     return render(request,
-                  'registration/dashboard.html',
+                  'registration/redirect.html',
                   {'section':'profile'})
 
 
@@ -37,13 +37,19 @@ def accounts_register(request):
             user.save()
             current_site = get_current_site(request)
             subject = 'Activate your Account'
-            message = render_to_string('registration/open_mail.html', {
+            message = render_to_string('registration/verification.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            user.email_user(subject=subject, message=message)
+            #user.email_user(subject=subject, message=message)
+            send_mail(
+                subject,
+                message,
+                'ajadimarvellousgo@gmail.com',['ajadimarvellousgo@gmail.com'],
+                fail_silently=False
+                )
             return HttpResponse('registered succesfully and activation sent')
     else:
         registerForm = RegistrationForm()
