@@ -130,6 +130,8 @@ $ pip install tinytag
 $ pip install mutagen
 $ pip install ffmpeg-python
 $ pip install whitenoise
+$ pip install jsonfield
+$ pip install html2pdf
 ```
 Next you run migrations by running the command:
 ```
