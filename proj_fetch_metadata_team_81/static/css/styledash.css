@@ -21,6 +21,7 @@ html, body {
     position: fixed;
     padding: 30px;
     border-right: #bfb9b9 1px solid;
+    /* margin-left: 30px; */
 }
 .clicked{
     color: #0066FF;   
@@ -51,6 +52,7 @@ html, body {
 .ic {
     width: 100%;
     cursor: pointer;
+    /* margin-left: -30px; */
     
 }
 .icon {
@@ -85,7 +87,7 @@ color:black;
 }
 .line {
     height: 1px;
-    width: 90%;
+    width: 100%;
     margin-left: 15px;
     margin-top: 75px;
 }
@@ -141,7 +143,7 @@ color:black;
     left: 650px;
     background-color: aliceblue;
     text-align: center;
-    bottom: 447px;
+    bottom: 510px;
     border: 2px #d2cece solid;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -149,12 +151,14 @@ color:black;
 
 .metadata td{
     width: 100%;
+    
     }
+
 
 .push {
     cursor: pointer;
     background-color: #0066FF;
-    width: 81px;
+    width: 100px;
     color: white;
     height: 28px;
     font-size: 12px;
@@ -162,10 +166,38 @@ color:black;
     position: relative;
     padding: 5px;
     text-align: center;
-    bottom: 119px;
-    left: 157px;
-    display: hidden;
+    bottom: 135px;
+    left: 88px;
 }
+
+#analyse_buttons {
+    display: flex;
+    margin-top: -30px;
+}
+
+#upload{
+    background-color: #0066FF;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    margin-top: -0px;
+}
+
+
+#analyse {
+    border: none;
+    height: 35px;
+}
+
+#save {
+    border: none;
+    margin-top: 10px;
+    height: 35px;
+    margin-left: -30px;
+    margin-right: 50px;
+
+}
+
 .search {
     position: relative;
     bottom: 423px;
@@ -342,7 +374,7 @@ img.search-bar{
     left: 20px;
 }
 input#search{
-    margin-bottom: 7vh;
+    margin-bottom: 17vh;
     width: 200px;
     height: 40px;
     padding-inline-start: 3vw;

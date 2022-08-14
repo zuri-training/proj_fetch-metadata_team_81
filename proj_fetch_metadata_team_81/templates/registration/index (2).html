@@ -23,18 +23,20 @@
             <div class="m">Menu</div>
             <div class="load">
                 <div class="icon clicked">
-                    <img class="ic" src="{% static './dashimg/activity.png' %}" alt="Alternate Text" /><a href="#dashboard" class="not">Dashboard</a>
+                    <img class="ic" src="{% static './dashimg/activity.png' %}" alt="Alternate Text" /><a
+                        href="#dashboard" class="not">Dashboard</a>
                 </div>
                 <div class="icon">
                     <img class="ic" src="{% static './dashimg/folder.png' %}" alt="Alternate Text" /><a href="#files"
-                                                                                                        class="not">Files</a>
+                        class="not">Files</a>
                 </div>
                 <div class="icon">
                     <img class="ic" src="{% static './dashimg/candle.png' %}" alt="Alternate Text" /><a c
-                                                                                                        href="#activity" class="not">Activity</a>
+                        href="#activity" class="not">Activity</a>
                 </div>
                 <div class="icon">
-                    <img class="ic" src="{% static './dashimg/message-text.png' %}" alt="Alternate Text" /><a href="#documentation" class="not">Documentation</a>
+                    <img class="ic" src="{% static './dashimg/message-text.png' %}" alt="Alternate Text" /><a
+                        href="#documentation" class="not">Documentation</a>
                 </div>
             </div>
             <hr class="line" />
@@ -45,7 +47,8 @@
                     <a class="not" href="#help-support">Help & Support</a>
                 </div>
                 <div class="icon">
-                    <img class="ic" src="{% static './dashimg/setting-3.png' %}" alt="Alternate Text" /><a href="#settings" class="not">Settings</a>
+                    <img class="ic" src="{% static './dashimg/setting-3.png' %}" alt="Alternate Text" /><a
+                        href="#settings" class="not">Settings</a>
 
                 </div>
             </div>
@@ -53,7 +56,8 @@
 
             <div class="loaddd">
                 <div class="icon">
-                    <img class="ic" src="{% static './dashimg/logout.png' %}" alt="Alternate Text" /><a href="{% url "logout" %}" class="not">Logout</a>
+                    <img class="ic" src="{% static './dashimg/logout.png' %}" alt="Alternate Text" /><a href="{% url "
+                        logout" %}" class="not">Logout</a>
                 </div>
             </div>
         </div>
@@ -69,16 +73,20 @@
                     <div class="mim">
                         <img class="mi" src="{% static './dashimg/metadata.png' %}" alt="Alternate Text" />
                     </div>
-                    <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                    <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data" id="analyse_butttons">
                         {% csrf_token %}
                         <a href="{% url 'upload' %}">
-                            <input class="push" type="file" name="myfile" value="" placeholder="Report Attachment"
-                                   enctype="multipart/form-data">
+                            <input class="push" id="upload" type="file" name="myfile" value=""
+                                placeholder="Report Attachment" enctype="multipart/form-data"
+                                onclick="hidFirstButton()">
                         </a>
-                        <a href="{% url 'upload' %}"> <button type="submit" class="push">Save</button></a>
-
+                        <div>
+                        <a href="{% url 'upload' %}"> <button type="submit" class="push" id="save"
+                                onclick="hidSecondButton()"">Save</button></a>
+                        <a href=" {% url 'result' %}"> <button class="push" id="analyse">Analyse</button></a>
+                    </div>
                     </form>
-                    <a href="{% url 'result' %}"> <button class="push">Analyse</button></a>
+
                     <div class="arrow">
 
 
@@ -134,8 +142,7 @@
                                 {% if file.myfile %}
                                 <form action="{% url 'upload' %}" method="POST">
                                     {% csrf_token %}
-                                    <input type="text" name="mename" value="{{ file.myfile }}"
-                                           style="display: none" />
+                                    <input type="text" name="mename" value="{{ file.myfile }}" style="display: none" />
                                     <button type="submit">Extract</button>
                                 </form>
                                 <a href="{{ file.myfile.url }}" download><button>Download</button></a>
@@ -173,21 +180,6 @@
                 </ul>
                 {% endif %}
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div id="activity">
                 <div class="head">
                     <div class="tag">
@@ -210,18 +202,7 @@
                                 <th>File name</th>
                                 <th>File type</th>
                             </tr>
-
                         </thead>
-
-
-
-
-
-
-
-
-
-
 
                         <tbody>
                             {% if files %}
@@ -283,8 +264,12 @@
                     </div>
                     <div class="answer">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ratione fugiat perferendis magni autem accusantium vel suscipit illum aperiam ipsum laborum dolores laudantium! Minima, incidunt dolore totam mollitia tenetur sed!
-                            Corrupti, aperiam aut! Sequi molestiae eligendi omnis dolorem autem deserunt dignissimos! Possimus illum voluptate sapiente corporis eligendi id officiis dolor! Unde assumenda tempora porro, facere laboriosam tenetur inventore quo adipisci.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ratione fugiat perferendis
+                            magni autem accusantium vel suscipit illum aperiam ipsum laborum dolores laudantium! Minima,
+                            incidunt dolore totam mollitia tenetur sed!
+                            Corrupti, aperiam aut! Sequi molestiae eligendi omnis dolorem autem deserunt dignissimos!
+                            Possimus illum voluptate sapiente corporis eligendi id officiis dolor! Unde assumenda
+                            tempora porro, facere laboriosam tenetur inventore quo adipisci.
                         </p>
 
                     </div>
@@ -299,9 +284,15 @@
 
                     <div class="answer">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                            voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                            labore praesentium officiis ipsa? Praesentium.
+                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id!
+                            Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim
+                            eum quos!
+                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum,
+                            perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate
+                            distinctio rem impedit voluptatibus sunt ex tenetur!
                         </p>
                     </div>
                 </div>
@@ -313,9 +304,15 @@
                     </div>
                     <div class="answer">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                            voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                            labore praesentium officiis ipsa? Praesentium.
+                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id!
+                            Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim
+                            eum quos!
+                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum,
+                            perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate
+                            distinctio rem impedit voluptatibus sunt ex tenetur!
                         </p>
                     </div>
                 </div>
@@ -328,9 +325,15 @@
                     </div>
                     <div class="answer">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                            voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                            labore praesentium officiis ipsa? Praesentium.
+                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id!
+                            Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim
+                            eum quos!
+                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum,
+                            perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate
+                            distinctio rem impedit voluptatibus sunt ex tenetur!
                         </p>
                     </div>
                 </div>
@@ -342,9 +345,15 @@
                     </div>
                     <div class="answer">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                            voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                            labore praesentium officiis ipsa? Praesentium.
+                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id!
+                            Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim
+                            eum quos!
+                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum,
+                            perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate
+                            distinctio rem impedit voluptatibus sunt ex tenetur!
                         </p>
                     </div>
                 </div>
@@ -356,9 +365,15 @@
                     </div>
                     <div class="answer">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi labore praesentium officiis ipsa? Praesentium.
-                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id! Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim eum quos!
-                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum, perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate distinctio rem impedit voluptatibus sunt ex tenetur!
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, deleniti eum. Alias debitis
+                            voluptates rerum, fugit est nesciunt beatae cupiditate nisi, quos distinctio eveniet commodi
+                            labore praesentium officiis ipsa? Praesentium.
+                            Id libero consequuntur quis autem ea sequi nisi sed sit hic? Culpa quae eveniet veniam id!
+                            Nam temporibus odit quod reprehenderit ratione nobis iure, sapiente, dolorem corrupti enim
+                            eum quos!
+                            Quasi rem, vero illo nam fugiat impedit rerum consequuntur? Recusandae totam rerum,
+                            perferendis illum nemo nobis quos itaque expedita, molestias minus enim, cupiditate
+                            distinctio rem impedit voluptatibus sunt ex tenetur!
                         </p>
                     </div>
                 </div>
@@ -367,4 +382,5 @@
     </div>
     <script src="{% static './js/dashboard.js' %}"></script>
 </body>
+
 </html>
