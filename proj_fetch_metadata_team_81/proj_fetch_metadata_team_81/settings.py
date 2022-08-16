@@ -131,7 +131,7 @@ MEDIA_URL='/media/'
 LOGIN_REDIRECT_URL='accounts:profile'
 LOGIN_URL='login'
 LOGOUT_URL='logout'
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -141,9 +141,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #Email Settings
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT='587'
-EMAIL_HOST_USER='ajadimarvellousgo@gmail.com'
-EMAIL_HOST_PASSWORD='oawhmfkqtpijonbf'
-EMAIL_USE_TSL=True
-EMAIL_USE_SSL=False
+# EMAIL_HOST='smtp.gmail.com'
+# EMAIL_PORT='587'
+# EMAIL_HOST_USER='ajadimarvellousgo@gmail.com'
+# EMAIL_HOST_PASSWORD='oawhmfkqtpijonbf'
+# EMAIL_USE_TSL=True
+# EMAIL_USE_SSL=False
+
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'a3395428e9c163'
+EMAIL_HOST_PASSWORD = 'a9927d5c3acec3'
+EMAIL_PORT = '2525'

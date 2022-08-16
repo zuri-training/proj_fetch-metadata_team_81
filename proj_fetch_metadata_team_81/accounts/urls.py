@@ -6,7 +6,7 @@ from .forms import UserLoginForm, PwdResetConfirmForm,PwdChangeForm, PwdResetFor
 app_name='accounts'
 
 urlpatterns = [
-    path('landing/', views.index, name='landingpage'),
+    path('', views.index, name='landingpage'),
     path('login/', auth_views.LoginView.as_view(template_name="registration/login.html", authentication_form=UserLoginForm), name='login'),
     path('profile/', views.profile, name='profile'),
     path('register/', views.accounts_register, name='register'),
